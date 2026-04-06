@@ -1,1 +1,2118 @@
-do local v0=game:GetService("Players");local v1=game:GetService("RunService");local v2=game:GetService("UserInputService");local v3=game:GetService("Lighting");local v4=game:GetService("TweenService");local v5=game:GetService("Stats");local v6=v0.LocalPlayer;while  not v6 do task.wait();v6=v0.LocalPlayer;end local v7=workspace.CurrentCamera or workspace:WaitForChild("Camera") ;local function v8(v312,v313) task.spawn(function() local v446=867 -(550 + 317) ;local v447;while true do if (v446==(0 -0)) then v447=Instance.new("Sound",workspace);v447.SoundId="rbxassetid://"   .. v312 ;v446=1;end if (v446==(1 -0)) then v447.Volume=v313 or 1 ;v447:Play();v446=5 -3 ;end if (v446==(287 -(134 + 151))) then v447.Ended:Wait();v447:Destroy();break;end end end);end local v9="Twisted";local v10="Red Premium";local v11="422672914";local v12=Color3.fromRGB(1920 -(970 + 695) ,0,0 -0 );local v13=Color3.fromRGB(2245 -(582 + 1408) ,100,100);local v14=Color3.fromRGB(27 -19 ,9 -1 ,10);local v15=Color3.fromRGB(678 -498 ,1824 -(1195 + 629) ,0 -0 );local v16=Color3.fromRGB(261 -(187 + 54) ,800 -(162 + 618) ,18 + 7 );local v17=Color3.fromRGB(50,0 + 0 ,0 -0 );local v18=Color3.fromRGB(403 -163 ,19 + 221 ,1876 -(1373 + 263) );local v19=1000.15 -(451 + 549) ;local v20=Enum.Font.Code;local v21=Enum.Font.GothamBlack;local v22=1 + 0 ;local function v23(v314,v315,v316) local v317=Instance.new("ImageLabel");v317.Name="GlowEffect";v317.BackgroundTransparency=1 -0 ;v317.Position=UDim2.new(0, -15,0, -15);v317.Size=UDim2.new(1 -0 ,1414 -(746 + 638) ,1 + 0 ,30);v317.ZIndex=v314.ZIndex-(1 -0) ;v317.Image="rbxassetid://5028857084";v317.ImageColor3=v315 or v12 ;v317.ImageTransparency=v316 or 0.6 ;v317.ScaleType=Enum.ScaleType.Slice;v317.SliceCenter=Rect.new(24,365 -(218 + 123) ,1857 -(1535 + 46) ,275 + 1 );v317.Parent=v314;return v317;end local v24="Twisted_Panel_Red_AME52";local v25=nil;pcall(function() v25=gethui and gethui() ;end);if  not v25 then pcall(function() v25=game:GetService("CoreGui");end);end if  not v25 then v25=v6:WaitForChild("PlayerGui");end for v330,v331 in pairs(v25:GetChildren()) do if (v331.Name==v24) then v331:Destroy();end end local v26=Instance.new("ScreenGui");v26.Name=v24;v26.ResetOnSpawn=false;v26.IgnoreGuiInset=true;v26.Parent=v25;local function v31(v332) v332.Visible=true;local v334=v332:FindFirstChildWhichIsA("UIScale") or Instance.new("UIScale",v332) ;local v335=((v332.Name=="TwistedMainFrame") and v22) or (1 + 0) ;v334.Scale=v335 * (560.8 -(306 + 254)) ;v332.BackgroundTransparency=1 + 0 ;local v338=TweenInfo.new(0.4 -0 ,Enum.EasingStyle.Back,Enum.EasingDirection.Out);v4:Create(v334,v338,{Scale=v335}):Play();v4:Create(v332,v338,{BackgroundTransparency=v19}):Play();local v339=v332:FindFirstChild("GlowEffect");if v339 then v339.ImageTransparency=1468 -(899 + 568) ;v4:Create(v339,TweenInfo.new(0.6),{ImageTransparency=0.6 + 0 }):Play();end end local function v32(v340) local v341=0;local v342;local v343;while true do if (v341==(0 -0)) then v342=v340:FindFirstChildWhichIsA("UIScale");v343=((v340.Name=="TwistedMainFrame") and v22) or (604 -(268 + 335)) ;v341=291 -(60 + 230) ;end if (v341==1) then if v342 then local v621=572 -(426 + 146) ;local v622;local v623;local v624;while true do if (v621==(1 + 2)) then v623.Completed:Connect(function() if (v342.Scale<(v343 * (1456.9 -(282 + 1174)))) then v340.Visible=false;end end);break;end if (v621==(813 -(569 + 242))) then if v624 then v4:Create(v624,v622,{ImageTransparency=1}):Play();end v623:Play();v621=8 -5 ;end if (v621==0) then v622=TweenInfo.new(0.3 + 0 ,Enum.EasingStyle.Sine,Enum.EasingDirection.In);v623=v4:Create(v342,v622,{Scale=v343 * 0.8 });v621=1025 -(706 + 318) ;end if (v621==(1252 -(721 + 530))) then v4:Create(v340,v622,{BackgroundTransparency=1272 -(945 + 326) }):Play();v624=v340:FindFirstChild("GlowEffect");v621=4 -2 ;end end else v340.Visible=false;end break;end end end local function v33(v344) local v345,v346,v347,v348;v344.InputBegan:Connect(function(v448) if ((v448.UserInputType==Enum.UserInputType.MouseButton1) or (v448.UserInputType==Enum.UserInputType.Touch)) then local v490=0 + 0 ;while true do if (v490==(701 -(271 + 429))) then v348=v344.Position;v448.Changed:Connect(function() if (v448.UserInputState==Enum.UserInputState.End) then v345=false;end end);break;end if (v490==(0 + 0)) then v345=true;v347=v448.Position;v490=1501 -(1408 + 92) ;end end end end);v344.InputChanged:Connect(function(v449) if ((v449.UserInputType==Enum.UserInputType.MouseMovement) or (v449.UserInputType==Enum.UserInputType.Touch)) then v346=v449;end end);v2.InputChanged:Connect(function(v450) if ((v450==v346) and v345) then local v491=1086 -(461 + 625) ;local v492;while true do if (v491==(1288 -(993 + 295))) then v492=v450.Position-v347 ;v344.Position=UDim2.new(v348.X.Scale,v348.X.Offset + v492.X ,v348.Y.Scale,v348.Y.Offset + v492.Y );break;end end end end);end local v34=Instance.new("Frame",v26);v34.Size=UDim2.new(0,16 + 284 ,1172 -(418 + 753) , -(16 + 24));v34.Position=UDim2.new(1 + 0 , -(91 + 219),0,6 + 14 );v34.BackgroundTransparency=530 -(406 + 123) ;local v38=Instance.new("UIListLayout",v34);v38.SortOrder=Enum.SortOrder.LayoutOrder;v38.Padding=UDim.new(0,1777 -(1749 + 20) );v38.HorizontalAlignment=Enum.HorizontalAlignment.Right;v38.VerticalAlignment=Enum.VerticalAlignment.Bottom;local function v46(v349) local v350=0 + 0 ;local v351;local v352;local v353;local v354;local v355;while true do if ((1323 -(1249 + 73))==v350) then v352=Instance.new("UIStroke",v351);v352.Color=v12;v352.Thickness=1.5 + 0 ;v23(v351,v12,0.7);v350=2;end if (v350==2) then v353=Instance.new("TextLabel",v351);v353.Size=UDim2.new(1146 -(466 + 679) , -(48 -28),2 -1 ,1900 -(106 + 1794) );v353.Position=UDim2.new(0,5 + 10 ,0,0 + 0 );v353.BackgroundTransparency=1;v350=8 -5 ;end if ((13 -8)==v350) then v355.Scale=0;v351.Parent=v34;v8("6518811195",114.5 -(4 + 110) );v4:Create(v355,TweenInfo.new(584.4 -(57 + 527) ,Enum.EasingStyle.Back,Enum.EasingDirection.Out),{Scale=1428 -(41 + 1386) }):Play();v350=109 -(17 + 86) ;end if (v350==(3 + 1)) then v353.TextXAlignment=Enum.TextXAlignment.Left;v354=math.clamp(v353.TextBounds.X + 40 ,334 -184 ,868 -568 );v351.Size=UDim2.new(166 -(122 + 44) ,v354,0 -0 ,132 -92 );v355=Instance.new("UIScale",v351);v350=5 + 0 ;end if (v350==(1 + 5)) then task.delay(5.5 -2 ,function() if  not v351 then return;end local v580=v4:Create(v355,TweenInfo.new(65.3 -(30 + 35) ,Enum.EasingStyle.Back,Enum.EasingDirection.In),{Scale=0});v580:Play();v580.Completed:Wait();if v351 then v351:Destroy();end end);break;end if ((0 + 0)==v350) then v351=Instance.new("Frame");v351.BackgroundColor3=v14;v351.BackgroundTransparency=1257.1 -(1043 + 214) ;Instance.new("UICorner",v351).CornerRadius=UDim.new(0,4);v350=3 -2 ;end if (v350==(1215 -(323 + 889))) then v353.Text=v349;v353.TextColor3=v18;v353.Font=v21;v353.TextSize=34 -21 ;v350=584 -(361 + 219) ;end end end local v47=Instance.new("Frame",v26);v47.Size=UDim2.new(0,600 -(53 + 267) ,0 + 0 ,445 -(15 + 398) );v47.Position=UDim2.new(0,1002 -(18 + 964) ,0 -0 ,20);v47.BackgroundColor3=v14;v47.BackgroundTransparency=0.2 + 0 ;v47.Visible=false;Instance.new("UICorner",v47).CornerRadius=UDim.new(0 + 0 ,6);local v54=Instance.new("UIStroke",v47);v54.Color=v17;v54.Thickness=1.5;v33(v47);v23(v47,v12,0.8);local v57=Instance.new("TextLabel",v47);v57.Size=UDim2.new(851 -(20 + 830) , -(16 + 4),1,0);v57.Position=UDim2.new(126 -(116 + 10) ,10,0 + 0 ,738 -(542 + 196) );v57.BackgroundTransparency=1;v57.Font=v20;v57.TextSize=13;v57.TextColor3=v18;v57.TextXAlignment=Enum.TextXAlignment.Left;v57.Text="Twisted RED | FPS: 0 | Ping: 0ms";local v67=Instance.new("Frame",v47);v67.Size=UDim2.new(0 -0 ,1 + 1 ,1, -10);v67.Position=UDim2.new(0 + 0 ,4,0 + 0 ,5);v67.BackgroundColor3=v12;v67.BorderSizePixel=0;Instance.new("UICorner",v67);local v72=Instance.new("ImageButton",v26);v72.Size=UDim2.new(0,118 -73 ,0 -0 ,1596 -(1126 + 425) );v72.Position=UDim2.new(405 -(118 + 287) ,78 -58 ,1121.5 -(118 + 1003) , -(64 -42));v72.BackgroundColor3=v14;v72.Image="rbxthumb://type=Asset&id="   .. v11   .. "&w=150&h=150" ;v72.ImageColor3=v12;v72.Visible=false;Instance.new("UICorner",v72).CornerRadius=UDim.new(378 -(142 + 235) ,0 -0 );local v80=Instance.new("UIStroke",v72);v80.Color=v17;v80.Thickness=1 + 1 ;v23(v72,v12,977.5 -(553 + 424) );v33(v72);local v83=true;v72.MouseButton1Click:Connect(function() local v356=0 -0 ;while true do if (v356==0) then v83= not v83;if v83 then v31(v26:FindFirstChild("TwistedMainFrame"));else v32(v26:FindFirstChild("TwistedMainFrame"));end v356=1 + 0 ;end if (v356==1) then v8("2668781453",0.5);break;end end end);local v84=Instance.new("Frame",v26);v84.Name="MobileFlyUI";v84.Size=UDim2.new(0 + 0 ,110,0 + 0 ,39 + 51 );v84.Position=UDim2.new(1 + 0 , -130,0.5 -0 , -(125 -80));v84.BackgroundTransparency=2 -1 ;v84.Visible=false;local v90=false;local v91=false;local v92=false;local v93=false;local function v94(v357,v358,v359) local v360=0;local v361;local v362;local v363;while true do if (v360==0) then v361=Instance.new("TextButton",v84);v361.Size=UDim2.new(0 + 0 ,42,0 -0 ,42);v361.Position=v358;v361.BackgroundColor3=v14;v360=754 -(239 + 514) ;end if (v360==(1 + 1)) then v361.TextSize=22;v361.AutoButtonColor=false;Instance.new("UICorner",v361).CornerRadius=UDim.new(1329 -(797 + 532) ,5 + 1 );v362=Instance.new("UIStroke",v361);v360=3;end if (v360==(2 + 2)) then function v363(v581) if (v359=="up") then v90=v581;elseif (v359=="down") then v91=v581;elseif (v359=="fwd") then v92=v581;elseif (v359=="back") then v93=v581;end local v582=(v581 and v18) or v15 ;local v583=(v581 and (0 -0)) or 0.4 ;local v584=(v581 and v12) or v17 ;v4:Create(v361,TweenInfo.new(1202.1 -(373 + 829) ),{TextColor3=v582,BackgroundTransparency=v583}):Play();v4:Create(v362,TweenInfo.new(0.1),{Color=v584}):Play();end v361.InputBegan:Connect(function(v585) if ((v585.UserInputType==Enum.UserInputType.Touch) or (v585.UserInputType==Enum.UserInputType.MouseButton1)) then v363(true);end end);v361.InputEnded:Connect(function(v586) if ((v586.UserInputType==Enum.UserInputType.Touch) or (v586.UserInputType==Enum.UserInputType.MouseButton1)) then v363(false);end end);break;end if (v360==(734 -(476 + 255))) then v362.Color=v17;v362.Thickness=1131.5 -(369 + 761) ;v23(v361,v12,0.6 + 0 );v363=nil;v360=6 -2 ;end if (v360==1) then v361.BackgroundTransparency=0.4 -0 ;v361.Text=v357;v361.TextColor3=v15;v361.Font=Enum.Font.GothamBlack;v360=240 -(64 + 174) ;end end end v94("▲",UDim2.new(0 + 0 ,0 -0 ,0,336 -(144 + 192) ),"fwd");v94("▼",UDim2.new(0,216 -(42 + 174) ,0,38 + 12 ),"back");v94("▲",UDim2.new(0,50 + 10 ,0 + 0 ,0),"up");v94("▼",UDim2.new(1504 -(363 + 1141) ,1640 -(1183 + 397) ,0,50),"down");local v95=Instance.new("Frame",v26);v95.AnchorPoint=Vector2.new(0.5 -0 ,0.5 + 0 );v95.Size=UDim2.new(0 + 0 ,2295 -(1913 + 62) ,0,114 + 66 );v95.Position=UDim2.new(0.5 -0 ,1933 -(565 + 1368) ,0.5 -0 ,1661 -(1477 + 184) );v95.BackgroundColor3=v14;v95.BorderSizePixel=0 -0 ;v95.Active=true;v95.Visible=false;Instance.new("UIScale",v95);Instance.new("UICorner",v95).CornerRadius=UDim.new(0 + 0 ,8);v33(v95);local v104=Instance.new("UIStroke",v95);v104.Color=v12;v104.Thickness=858 -(564 + 292) ;v23(v95,v12,0.6 -0 );local v107=Instance.new("TextLabel",v95);v107.Size=UDim2.new(1,0 -0 ,304 -(244 + 60) ,31 + 9 );v107.Position=UDim2.new(476 -(41 + 435) ,1001 -(938 + 63) ,0 + 0 ,15);v107.Text="ACCESS REQUIRED";v107.TextColor3=v12;v107.BackgroundTransparency=1;v107.Font=v21;v107.TextSize=22;local v115=Instance.new("TextBox",v95);v115.Size=UDim2.new(1125 -(936 + 189) ,86 + 174 ,0,40);v115.Position=UDim2.new(1613.5 -(1565 + 48) , -(81 + 49),1138.45 -(782 + 356) ,267 -(176 + 91) );v115.BackgroundColor3=v16;v115.Text="";v115.PlaceholderText="Enter License Key...";v115.PlaceholderColor3=Color3.fromRGB(260 -160 ,100,100);v115.TextColor3=v18;v115.Font=v20;v115.TextSize=20 -6 ;Instance.new("UICorner",v115).CornerRadius=UDim.new(0,6);local v126=Instance.new("UIStroke",v115);v126.Color=v17;v126.Thickness=1;local v129=Instance.new("TextButton",v95);v129.Size=UDim2.new(1092 -(975 + 117) ,2135 -(157 + 1718) ,0,40);v129.Position=UDim2.new(0.5, -(106 + 24),0.75 -0 ,0 -0 );v129.BackgroundColor3=v16;v129.Text="ACTIVATE";v129.TextColor3=v12;v129.Font=v21;v129.TextSize=1033 -(697 + 321) ;v129.AutoButtonColor=false;Instance.new("UICorner",v129).CornerRadius=UDim.new(0 -0 ,12 -6 );local v139=Instance.new("UIStroke",v129);v139.Color=v12;v139.Thickness=2.5 -1 ;v129.MouseEnter:Connect(function() v4:Create(v129,TweenInfo.new(0.2 + 0 ),{BackgroundColor3=v15,TextColor3=v18}):Play();end);v129.MouseLeave:Connect(function() v4:Create(v129,TweenInfo.new(0.2),{BackgroundColor3=v16,TextColor3=v12}):Play();end);local v142=Instance.new("Frame",v26);v142.Name="TwistedMainFrame";v142.AnchorPoint=Vector2.new(0.5 -0 ,0.5);v142.Size=UDim2.new(0 -0 ,1577 -(322 + 905) ,611 -(602 + 9) ,420);v142.Position=UDim2.new(0.5,1189 -(449 + 740) ,0.5,872 -(826 + 46) );v142.BackgroundColor3=v14;v142.BackgroundTransparency=v19;v142.Visible=false;v142.Active=true;Instance.new("UIScale",v142);Instance.new("UICorner",v142).CornerRadius=UDim.new(947 -(245 + 702) ,31 -21 );v33(v142);local v152=Instance.new("UIStroke",v142);v152.Color=v12;v152.Thickness=1 + 1 ;v23(v142,v12,1898.5 -(260 + 1638) );local v155=Instance.new("ImageLabel",v142);v155.Size=UDim2.new(440 -(382 + 58) ,144 -99 ,0 + 0 ,45);v155.Position=UDim2.new(1 -0 , -55,0,44 -29 );v155.BackgroundTransparency=1206 -(902 + 303) ;v155.ImageColor3=v12;v155.Image="rbxthumb://type=Asset&id="   .. v11   .. "&w=150&h=150" ;v155.ZIndex=10 -5 ;local v162=Instance.new("TextLabel",v142);v162.Size=UDim2.new(2 -1 ,0,0 + 0 ,1720 -(1121 + 569) );v162.Position=UDim2.new(0,20,214 -(22 + 192) ,698 -(483 + 200) );v162.Text=v9;v162.TextColor3=v18;v162.BackgroundTransparency=1;v162.Font=v21;v162.TextSize=26;v162.TextXAlignment=Enum.TextXAlignment.Left;local v171=Instance.new("UIGradient",v162);v171.Color=ColorSequence.new({ColorSequenceKeypoint.new(0,v12),ColorSequenceKeypoint.new(1 -0 ,v13)});local v173=Instance.new("TextLabel",v142);v173.Size=UDim2.new(766 -(468 + 297) ,562 -(334 + 228) ,0 -0 ,34 -19 );v173.Position=UDim2.new(0,37 -16 ,0,40);v173.Text=v10;v173.TextColor3=v18;v173.BackgroundTransparency=1 + 0 ;v173.Font=v20;v173.TextSize=12;v173.TextTransparency=0.4;v173.TextXAlignment=Enum.TextXAlignment.Left;local v183=Instance.new("Frame",v142);v183.Size=UDim2.new(1, -40,236 -(141 + 95) ,36);v183.Position=UDim2.new(0 + 0 ,20,0 -0 ,70);v183.BackgroundTransparency=2 -1 ;local v187=Instance.new("UIListLayout",v183);v187.FillDirection=Enum.FillDirection.Horizontal;v187.Padding=UDim.new(0 + 0 ,21 -13 );local function v191(v364) local v365=0;local v366;local v367;local v368;while true do if (v365==(2 + 0)) then v366.TextSize=6 + 5 ;v366.AutoButtonColor=false;Instance.new("UICorner",v366).CornerRadius=UDim.new(0 -0 ,4 + 2 );v365=166 -(92 + 71) ;end if (v365==5) then return v366;end if (v365==(2 + 1)) then v367=Instance.new("UIStroke",v366);v367.Color=v17;v367.Thickness=1 -0 ;v365=769 -(574 + 191) ;end if (v365==(1 + 0)) then v366.Text=v364;v366.TextColor3=v12;v366.Font=v21;v365=4 -2 ;end if (v365==(3 + 1)) then v368=TweenInfo.new(0.2);v366.MouseEnter:Connect(function() if (v366.BackgroundColor3~=v15) then v4:Create(v367,v368,{Color=v12}):Play();v4:Create(v366,v368,{BackgroundColor3=Color3.fromRGB(30,879 -(254 + 595) ,35)}):Play();end end);v366.MouseLeave:Connect(function() if (v366.BackgroundColor3~=v15) then v4:Create(v367,v368,{Color=v17}):Play();v4:Create(v366,v368,{BackgroundColor3=v16}):Play();end end);v365=131 -(55 + 71) ;end if (v365==(0 -0)) then v366=Instance.new("TextButton",v183);v366.Size=UDim2.new(1790.23 -(573 + 1217) ,0 -0 ,1 + 0 ,0 -0 );v366.BackgroundColor3=v16;v365=940 -(714 + 225) ;end end end local v192=v191("INFO");local v193=v191("LOCAL");local v194=v191("TP");local v195=v191("CUSTOMIZE");local function v196() local v369=0 -0 ;local v370;local v371;local v372;while true do if (4==v369) then v372.SortOrder=Enum.SortOrder.LayoutOrder;v372.Padding=UDim.new(0,13 -3 );return v370;end if (1==v369) then v370.Visible=false;v370.ScrollBarThickness=1 + 1 ;v370.ScrollBarImageColor3=v12;v370.BorderSizePixel=0 -0 ;v369=808 -(118 + 688) ;end if (v369==3) then v371.PaddingRight=UDim.new(48 -(25 + 23) ,4 + 16 );v371.PaddingTop=UDim.new(1886 -(927 + 959) ,5);v371.PaddingBottom=UDim.new(0,50 -35 );v372=Instance.new("UIListLayout",v370);v369=736 -(16 + 716) ;end if (v369==2) then v370.CanvasSize=UDim2.new(0 -0 ,97 -(11 + 86) ,0 -0 ,285 -(175 + 110) );v370.AutomaticCanvasSize=Enum.AutomaticSize.Y;v371=Instance.new("UIPadding",v370);v371.PaddingLeft=UDim.new(0 -0 ,98 -78 );v369=1799 -(503 + 1293) ;end if ((0 -0)==v369) then v370=Instance.new("ScrollingFrame",v142);v370.Size=UDim2.new(1 + 0 ,1061 -(810 + 251) ,1 + 0 , -(37 + 83));v370.Position=UDim2.new(0,0,0,104 + 11 );v370.BackgroundTransparency=1;v369=1;end end end local v197=v196();v197.Visible=true;local v199=v196();local v200=v196();local v201=v196();local v202={v197,v199,v200,v201};local v203={v192,v193,v194,v195};local function v204(v373,v374) local v375=0;while true do if (v375==(0 + 0)) then v8("2668781453",1744.8 -(1344 + 400) );for v587,v588 in pairs(v202) do v588.Visible=false;end v375=406 -(255 + 150) ;end if ((1 + 0)==v375) then for v590,v591 in pairs(v203) do local v592=0;while true do if (v592==(0 + 0)) then v4:Create(v591,TweenInfo.new(0.2),{BackgroundColor3=v16,TextColor3=v12}):Play();v591:FindFirstChildWhichIsA("UIStroke").Color=v17;break;end end end v374.Visible=true;v375=8 -6 ;end if (v375==(6 -4)) then v4:Create(v373,TweenInfo.new(1739.2 -(404 + 1335) ),{BackgroundColor3=v15,TextColor3=v18}):Play();v373:FindFirstChildWhichIsA("UIStroke").Color=v12;break;end end end v192.MouseButton1Click:Connect(function() v204(v192,v197);end);v193.MouseButton1Click:Connect(function() v204(v193,v199);end);v194.MouseButton1Click:Connect(function() v204(v194,v200);end);v195.MouseButton1Click:Connect(function() v204(v195,v201);end);v192.BackgroundColor3=v15;v192.TextColor3=v18;v192:FindFirstChildWhichIsA("UIStroke").Color=v12;local v208=Instance.new("TextLabel",v197);v208.Size=UDim2.new(1,0,406 -(183 + 223) ,304 -54 );v208.BackgroundTransparency=1 + 0 ;v208.Text="Twisted V12.0 [PREMIUM]\n\nCreated by: AME52\n\n• Иконка сбоку: Скрыть/Показать меню.\n\n[🛡] Godmode: Защита от торнадо и падений\n[📱] Оптимизировано для мобильных устройств\n[⚙] Customization: Настройка размера UI";v208.TextColor3=v18;v208.Font=v20;v208.TextSize=5 + 7 ;v208.TextYAlignment=Enum.TextYAlignment.Top;v208.TextXAlignment=Enum.TextXAlignment.Left;local function v218(v376,v377) v376.MouseButton1Click:Connect(function() v8("2668781453",337.6 -(10 + 327) );v377();end);end local function v219(v378) local v379=0 + 0 ;local v380;local v381;while true do if (v379==(338 -(118 + 220))) then v380=Instance.new("Frame",v378);v380.Size=UDim2.new(1 + 0 ,449 -(108 + 341) ,0 + 0 ,36);v379=4 -3 ;end if ((1496 -(711 + 782))==v379) then return v380;end if (v379==2) then v381.FillDirection=Enum.FillDirection.Horizontal;v381.Padding=UDim.new(0 -0 ,477 -(270 + 199) );v379=3;end if (v379==1) then v380.BackgroundTransparency=1 + 0 ;v381=Instance.new("UIListLayout",v380);v379=2;end end end local function v220(v382,v383,v384) local v385=1819 -(580 + 1239) ;local v386;local v387;local v388;while true do if (v385==(8 -5)) then v387=Instance.new("UIStroke",v386);v387.Color=v17;v387.Thickness=1 + 0 ;v385=4;end if (v385==(1 + 1)) then v386.TextSize=5 + 6 ;v386.AutoButtonColor=false;Instance.new("UICorner",v386).CornerRadius=UDim.new(0 -0 ,4 + 2 );v385=3;end if (v385==(1167 -(645 + 522))) then v386=Instance.new("TextButton",v383);v386.Size=(v384 and UDim2.new(1,0,1,0)) or UDim2.new(1790.5 -(1010 + 780) , -(4 + 0),4 -3 ,0 -0 ) ;v386.BackgroundColor3=v16;v385=1;end if (v385==4) then v387.ApplyStrokeMode=Enum.ApplyStrokeMode.Border;v388=TweenInfo.new(1836.2 -(1045 + 791) );v386.MouseEnter:Connect(function() if ( not string.find(v386.Text,": ON") and  not string.find(v386.Text,"LOCKED") and  not string.find(v386.Text,"SAVED")) then v4:Create(v387,v388,{Color=v12}):Play();v4:Create(v386,v388,{BackgroundColor3=Color3.fromRGB(30,75 -45 ,35)}):Play();end end);v385=5;end if (v385==5) then v386.MouseLeave:Connect(function() if ( not string.find(v386.Text,": ON") and  not string.find(v386.Text,"LOCKED") and  not string.find(v386.Text,"SAVED")) then local v652=0 -0 ;while true do if (v652==0) then v4:Create(v387,v388,{Color=v17}):Play();v4:Create(v386,v388,{BackgroundColor3=v16}):Play();break;end end end end);return v386;end if (v385==(506 -(351 + 154))) then v386.Text=v382;v386.TextColor3=v18;v386.Font=v20;v385=2;end end end local function v221(v389,v390) local v391=Instance.new("Frame",v390);v391.Size=UDim2.new(1,1574 -(1281 + 293) ,266 -(28 + 238) ,106 -58 );v391.BackgroundTransparency=1560 -(1381 + 178) ;local v394=Instance.new("TextLabel",v391);v394.Size=UDim2.new(1 + 0 ,0 + 0 ,0 + 0 ,61 -43 );v394.Text=v389;v394.TextColor3=v18;v394.BackgroundTransparency=1 + 0 ;v394.Font=v20;v394.TextSize=12;v394.TextXAlignment=Enum.TextXAlignment.Left;local v403=Instance.new("TextButton",v391);v403.Text="";v403.AutoButtonColor=false;v403.Size=UDim2.new(471 -(381 + 89) ,0,0 + 0 ,17 + 7 );v403.Position=UDim2.new(0 -0 ,1156 -(1074 + 82) ,0 -0 ,1806 -(214 + 1570) );v403.BackgroundColor3=v16;v403.BorderSizePixel=1455 -(990 + 465) ;Instance.new("UICorner",v403).CornerRadius=UDim.new(0 + 0 ,6);local v411=Instance.new("UIStroke",v403);v411.Color=v17;v411.Thickness=1 + 0 ;local v414=Instance.new("Frame",v403);v414.BackgroundColor3=v12;v414.BorderSizePixel=0;v414.Interactable=false;v414.Size=UDim2.new(0,0,1 + 0 ,0);Instance.new("UICorner",v414).CornerRadius=UDim.new(0 -0 ,6);v23(v414,v12,0.7);return v394,v403,v414;end local v222=v219(v199);local v223=v220("CAR FLY: OFF",v222,false);local v224=v220("NOCLIP: OFF",v222,false);local v225=v219(v199);local v226=v220("GODMODE: OFF",v225,false);local v227=v220("FPS BOOST: OFF",v225,false);local v228=v219(v199);local v229=v220("FULLBRIGHT: OFF",v228,false);local v230=v220("TORNADO ESP: OFF",v228,false);local v231=v219(v199);local v232=v220("PLAYER ESP: OFF",v231,false);local v233=v220("MY CAR ESP: OFF",v231,false);local v234,v235,v236=v221("CAR SPEED: 100",v199);v236.Size=UDim2.new(1726.09 -(1668 + 58) ,626 -(512 + 114) ,1,0);local v238=v219(v200);local v239=v220("PRIOR LAKE",v238,true);local v240=v219(v200);local v241=v220("HAZELTON",v240,true);local v242=v219(v200);local v243=v220("HIBBING",v242,true);local v244=v219(v200);local v245=Instance.new("TextBox",v244);v245.Size=UDim2.new(0.25,0 -0 ,1 -0 ,0 -0 );v245.BackgroundColor3=v16;v245.Text="";v245.PlaceholderText="ID";v245.TextColor3=v18;v245.Font=v20;v245.TextSize=6 + 6 ;Instance.new("UICorner",v245).CornerRadius=UDim.new(0 + 0 ,6 + 0 );local v254=Instance.new("UIStroke",v245);v254.Color=v17;v254.Thickness=3 -2 ;local v257=v220("TP TO TORNADO",v244,false);v257.Size=UDim2.new(0.75, -8,1,1994 -(109 + 1885) );local v259=v219(v200);local v260=v220("TP TO MY CAR",v259,true);local v261=v219(v200);local v262=v220("SET TRAP 1",v261,false);local v263=v220("TP TRAP 1",v261,false);local v264=v219(v200);local v265=v220("SET TRAP 2",v264,false);local v266=v220("TP TRAP 2",v264,false);local v267=v219(v200);local v268=v220("SET TRAP 3",v267,false);local v269=v220("TP TRAP 3",v267,false);local v270,v271,v272=v221("UI SCALE: 1.0",v201);v272.Size=UDim2.new(0.5,1469 -(1269 + 200) ,1 -0 ,0);local v274=false;local v275,v276,v277,v278,v279,v280,v281,v282=false,false,false,false,false,false,false,false;local v283=false;local v284=false;local v285=915 -(98 + 717) ;local v286={};local v287={};local v288={nil,nil,nil};local v289=nil;local v290=nil;local v291=Instance.new("Highlight");v291.Name="MyCarChams_Twisted";v291.FillColor=v12;v291.OutlineColor=v18;v291.FillTransparency=0.6 + 0 ;v291.OutlineTransparency=0.2 + 0 ;v291.DepthMode=Enum.HighlightDepthMode.AlwaysOnTop;v291.Enabled=false;v291.Parent=v26;local v301={Ambient=v3.Ambient,OutdoorAmbient=v3.OutdoorAmbient,Brightness=v3.Brightness,GlobalShadows=v3.GlobalShadows};local v302=v6:GetMouse();local function v303(v420,v421,v422) local v423=0 + 0 ;local v424;while true do if (v423==(1 + 0)) then if v421 then local v626=0 -0 ;while true do if (v626==(0 -0)) then v4:Create(v420,TweenInfo.new(0.3 + 0 ),{BackgroundColor3=v15}):Play();if v424 then v4:Create(v424,TweenInfo.new(0.3 + 0 ),{Color=v12}):Play();end break;end end else v4:Create(v420,TweenInfo.new(0.3 + 0 ),{BackgroundColor3=v16}):Play();if v424 then v4:Create(v424,TweenInfo.new(0.3),{Color=v17}):Play();end end break;end if (v423==(0 + 0)) then v420.Text=v422   .. ": "   .. ((v421 and "ON") or "OFF") ;v424=v420:FindFirstChildWhichIsA("UIStroke");v423=1 + 0 ;end end end v31(v95);local v304=false;local v305="https://raw.githubusercontent.com/dadadadaoooda2-design/Key-tw/refs/heads/main/key.txt";v129.MouseButton1Click:Connect(function() if v304 then return;end local v425=v115.Text;if (v425=="") then return;end v304=true;v129.Text="CHECKING...";v4:Create(v139,TweenInfo.new(1433.2 -(797 + 636) ),{Color=v18}):Play();task.spawn(function() local v451=v305   .. "?nocache="   .. tostring(tick()) ;local v452,v453=pcall(function() return game:HttpGet(v451,true);end);task.wait(0.5 -0 );if (v452 and v453) then local v570=1619 -(1427 + 192) ;local v571;local v572;while true do if (v570==0) then v571=false;v572=string.lower(string.gsub(v425,"[%s%c]",""));v570=1;end if (v570==(1 + 0)) then for v669 in string.gmatch(v453,"[^\r\n]+") do local v670=string.lower(string.gsub(v669,"[%s%c]",""));if ((v572==v670) and (v572~="")) then v571=true;break;end end if v571 then local v701=0 -0 ;while true do if (v701==(1 + 0)) then v4:Create(v129,TweenInfo.new(0.2 + 0 ),{BackgroundColor3=Color3.fromRGB(0,150,326 -(192 + 134) )}):Play();task.wait(1276.6 -(316 + 960) );v32(v95);v701=2 + 0 ;end if (v701==(3 + 0)) then v31(v142);v72.Visible=true;v46("🔥 Welcome to Twisted RED!");break;end if (v701==(0 + 0)) then v8("120296772330167",3.5 -2 );v129.Text="GRANTED!";v4:Create(v126,TweenInfo.new(551.2 -(83 + 468) ),{Color=Color3.fromRGB(1806 -(1202 + 604) ,1190 -935 ,0 -0 )}):Play();v701=2 -1 ;end if (v701==(327 -(45 + 280))) then task.wait(0.4 + 0 );v274=true;v47.Visible=true;v701=3;end end else local v702=0 + 0 ;while true do if (v702==(1 + 1)) then v4:Create(v126,TweenInfo.new(0.2 + 0 ),{Color=v12}):Play();v4:Create(v139,TweenInfo.new(0.2 + 0 ),{Color=v12}):Play();break;end if (v702==(1 -0)) then v115.PlaceholderText="INVALID KEY!";v129.Text="ACTIVATE";v702=1913 -(340 + 1571) ;end if (v702==(0 + 0)) then v8("6518811195",1773 -(1733 + 39) );v115.Text="";v702=2 -1 ;end end end break;end end else local v573=1034 -(125 + 909) ;while true do if (v573==(1948 -(1096 + 852))) then v115.Text="";v115.PlaceholderText="ERROR FETCHING!";v573=1 + 0 ;end if ((1 -0)==v573) then v129.Text="ACTIVATE";v4:Create(v126,TweenInfo.new(0.2 + 0 ),{Color=v12}):Play();break;end end end v304=false;end);end);v2.InputBegan:Connect(function(v427,v428) if ( not v428 and (v427.KeyCode==Enum.KeyCode.Delete) and v274) then v83= not v83;if v83 then v31(v142);else v32(v142);end end end);local function v306(v429,v430,v431) if (v274 and v6.Character and v6.Character:FindFirstChild("Humanoid")) then local v459=v6.Character.Humanoid;local v460=v6.Character:FindFirstChild("HumanoidRootPart");if v459.SeatPart then local v593=0;local v594;while true do if (v593==0) then v594=v459.SeatPart.AssemblyRootPart or v459.SeatPart ;v594.CFrame=CFrame.new(v429,v430 + (518 -(409 + 103)) ,v431);break;end end elseif v460 then v460.CFrame=CFrame.new(v429,v430 + 3 ,v431);end end end v218(v239,function() v306(1060.15 -(46 + 190) ,21.4,3989.41);end);v218(v241,function() v306(579.97,116.4 -(51 + 44) , -(3453.1399999999994 + 8789));end);v218(v243,function() v306( -(11400.6 -(1114 + 203)),747.36 -(228 + 498) ,1439.7299999999996 + 5200 );end);local function v307(v432,v433,v434) local v435=0 + 0 ;while true do if (v435==0) then v218(v432,function() if (v274 and v6.Character and v6.Character:FindFirstChild("HumanoidRootPart")) then local v657=663 -(174 + 489) ;while true do if (v657==(0 -0)) then v288[v434]=v6.Character.HumanoidRootPart.Position;v432.Text="SAVED!";v657=1906 -(830 + 1075) ;end if (v657==1) then v4:Create(v432,TweenInfo.new(0.3),{BackgroundColor3=Color3.fromRGB(524 -(303 + 221) ,1419 -(231 + 1038) ,0 + 0 )}):Play();v433.TextColor3=v18;v657=1164 -(171 + 991) ;end if (v657==(12 -9)) then v4:Create(v432,TweenInfo.new(0.3 -0 ),{BackgroundColor3=v16}):Play();break;end if (v657==(4 -2)) then task.wait(1.5);v432.Text="SET TRAP "   .. v434 ;v657=3 + 0 ;end end end end);v218(v433,function() if (v274 and v288[v434]) then v306(v288[v434].X,v288[v434].Y,v288[v434].Z);end end);break;end end end v307(v262,v263,3 -2 );v307(v265,v266,5 -3 );v307(v268,v269,3);v218(v223,function() if v274 then local v461=0 -0 ;while true do if ((0 -0)==v461) then v276= not v276;v303(v223,v276,"CAR FLY");v461=1;end if (v461==(1249 -(111 + 1137))) then v84.Visible=v276;if ( not v276 and v290) then if v290:FindFirstChild("TwistedFlyV") then v290.TwistedFlyV:Destroy();end if v290:FindFirstChild("TwistedFlyG") then v290.TwistedFlyG:Destroy();end v290=nil;end break;end end end end);v218(v226,function() if v274 then v282= not v282;v303(v226,v282,"GODMODE");end end);v218(v230,function() if v274 then v279= not v279;v303(v230,v279,"TORNADO ESP");end end);v218(v232,function() if v274 then v280= not v280;v303(v232,v280,"PLAYER ESP");if  not v280 then for v628,v629 in pairs(v287) do v629:Destroy();end table.clear(v287);end end end);v218(v224,function() if v274 then local v462=0;while true do if (v462==(158 -(91 + 67))) then v275= not v275;v303(v224,v275,"NOCLIP");v462=2 -1 ;end if ((1 + 0)==v462) then if ( not v275 and v6.Character) then for v703,v704 in pairs(v6.Character:GetDescendants()) do if v704:IsA("BasePart") then v704.CanCollide=true;end end end break;end end end end);v218(v227,function() if v274 then local v463=523 -(423 + 100) ;while true do if (v463==0) then v277= not v277;v303(v227,v277,"FPS BOOST");v463=1 + 0 ;end if ((2 -1)==v463) then if v277 then task.spawn(function() local v705=0;while true do if (v705==(1 + 0)) then for v756,v757 in pairs(workspace:GetDescendants()) do if (v757:IsA("BasePart") and  not v757.Parent:FindFirstChild("Humanoid")) then v757.Material=Enum.Material.SmoothPlastic;v757.CastShadow=false;end end break;end if (v705==(771 -(326 + 445))) then v3.GlobalShadows=false;for v758,v759 in pairs(v3:GetDescendants()) do if v759:IsA("PostEffect") then v759.Enabled=false;end end v705=4 -3 ;end end end);end break;end end end end);v218(v229,function() if v274 then v278= not v278;v303(v229,v278,"FULLBRIGHT");if v278 then v3.Ambient=Color3.new(2 -1 ,2 -1 ,712 -(530 + 181) );v3.OutdoorAmbient=Color3.new(1,882 -(614 + 267) ,1);v3.Brightness=34 -(19 + 13) ;v3.GlobalShadows=false;else local v599=0 -0 ;while true do if (v599==(2 -1)) then v3.Brightness=v301.Brightness;v3.GlobalShadows=v301.GlobalShadows;break;end if (0==v599) then v3.Ambient=v301.Ambient;v3.OutdoorAmbient=v301.OutdoorAmbient;v599=2 -1 ;end end end end end);local function v308(v436) local v437=0 + 0 ;local v438;local v439;while true do if (v437==(0 -0)) then v438=v436;v439=v436;v437=1 -0 ;end if (v437==1) then while v439 and v439.Parent and (v439.Parent~=workspace)  do if v439.Parent:IsA("Model") then v438=v439.Parent;end v439=v439.Parent;end return v438;end end end v218(v233,function() if v274 then local v464=1812 -(1293 + 519) ;while true do if (v464==(0 -0)) then v281= not v281;if v281 then local v680=0 -0 ;while true do if (v680==(0 -0)) then if (v6.Character and v6.Character:FindFirstChild("Humanoid") and v6.Character.Humanoid.SeatPart) then local v760=0 -0 ;local v761;local v762;while true do if (v760==1) then if (v762 and (v762~=v6.Character)) then v289=v762;end break;end if ((0 -0)==v760) then v761=v6.Character.Humanoid.SeatPart;v762=v308(v761);v760=1;end end end v303(v233,true,"MY CAR [LOCKED]");break;end end else local v681=0 + 0 ;while true do if (v681==(0 + 0)) then v289=nil;v291.Enabled=false;v681=1;end if (v681==(2 -1)) then v303(v233,false,"MY CAR ESP");break;end end end break;end end end end);v218(v260,function() if v274 then if (v289 and v289.Parent) then local v601=v289.PrimaryPart or v289:FindFirstChildWhichIsA("VehicleSeat",true) or v289:FindFirstChildWhichIsA("BasePart",true) ;if v601 then v306(v601.Position.X,v601.Position.Y + 2 + 4 ,v601.Position.Z);v260.Text="TELEPORTED!";v260.TextColor3=Color3.fromRGB(0,85 + 170 ,0 + 0 );task.wait(1);v260.Text="TP TO MY CAR";v260.TextColor3=v18;end else v260.Text="LOCK CAR FIRST!";v260.TextColor3=v12;task.wait(1097 -(709 + 387) );v260.Text="TP TO MY CAR";v260.TextColor3=v18;end end end);v218(v257,function() if v274 then local v465=1858 -(673 + 1185) ;local v466;while true do if (v465==0) then v466=tonumber(v245.Text);if (v466 and v286[v466] and v286[v466].root) then local v682=v286[v466].root;v306(v682.Position.X,v682.Position.Y + (174 -114) ,v682.Position.Z);v257.Text="TELEPORTED!";v257.TextColor3=Color3.fromRGB(0 -0 ,419 -164 ,0);task.wait(1 + 0 );v257.Text="TP TO TORNADO";v257.TextColor3=v18;else v257.Text="INVALID ID!";v257.TextColor3=v12;task.wait(1);v257.Text="TP TO TORNADO";v257.TextColor3=v18;end break;end end end end);task.spawn(function() while task.wait(3) do if ( not v274 or  not v279) then for v604,v605 in ipairs(v286) do if v605.esp then v605.esp:Destroy();end end table.clear(v286);continue;end local v454={};local v455=workspace:GetDescendants();for v467,v468 in ipairs(v455) do if ((v467%(748 + 252))==(0 -0)) then task.wait();end if  not v279 then break;end if v468:IsA("BasePart") then local v606=0;local v607;while true do if (v606==(0 + 0)) then v607=string.lower(v468.Name);if (string.find(v607,"tornado") or string.find(v607,"funnel")) then local v712=0;local v713;local v714;local v715;local v716;while true do if (v712==(7 -3)) then if  not v715 then table.insert(v454,v468);end break;end if (v712==(3 -1)) then if v714 then continue;end v715=false;v712=1883 -(446 + 1434) ;end if (v712==(1284 -(1040 + 243))) then v714=false;for v766,v767 in ipairs(v713) do if string.find(v607,v767) then v714=true;break;end end v712=2;end if (v712==0) then if ((v468.Size.Y<(59 -39)) and (v468.Size.X<(1867 -(559 + 1288)))) then continue;end v713={"tiv","tv","probe","trap","sensor","radar","screen","warning","watch","siren","intercept","vehicle","radio","detector","car","seat"};v712=1 + 0 ;end if (v712==3) then v716=v468.Parent;while v716 and (v716~=workspace)  do if (v716:IsA("Model") and (v716:FindFirstChildWhichIsA("VehicleSeat") or v716:FindFirstChildWhichIsA("Humanoid"))) then v715=true;break;end v716=v716.Parent;end v712=4;end end end break;end end end end if  not v279 then continue;end local v456={};for v469,v470 in ipairs(v454) do local v471=false;for v574,v575 in ipairs(v456) do if ((v470.Position-v575.Position).Magnitude<(2967 -1967)) then v471=true;break;end end if  not v471 then table.insert(v456,v470);end end for v472,v473 in ipairs(v286) do if v473.esp then v473.esp:Destroy();end end table.clear(v286);for v474,v475 in ipairs(v456) do local v476=0 + 0 ;local v477;local v478;while true do if (v476==(7 -3)) then v478.TextStrokeColor3=Color3.new(0 + 0 ,0 + 0 ,0 + 0 );v478.Font=Enum.Font.GothamBlack;v478.TextSize=14 + 2 ;v476=5 + 0 ;end if (v476==(434 -(153 + 280))) then v477.AlwaysOnTop=true;v477.Adornee=v475;v477.Parent=v26;v476=5 -3 ;end if (v476==(3 + 0)) then v478.BackgroundTransparency=1 + 0 ;v478.TextColor3=v12;v478.TextStrokeTransparency=0 + 0 ;v476=4 + 0 ;end if (v476==(0 + 0)) then v477=Instance.new("BillboardGui");v477.Name="TornadoESP_Red";v477.Size=UDim2.new(0,304 -104 ,0 + 0 ,717 -(89 + 578) );v476=1 + 0 ;end if ((10 -5)==v476) then table.insert(v286,{root=v475,esp=v477});break;end if (v476==2) then v478=Instance.new("TextLabel",v477);v478.Name="Txt";v478.Size=UDim2.new(1050 -(572 + 477) ,0 + 0 ,1,0);v476=3;end end end end end);task.spawn(function() while task.wait(0.25 + 0 ) do if ( not v274 or  not v6.Character) then continue;end local v457=v6.Character:FindFirstChild("HumanoidRootPart");if  not v457 then continue;end if v279 then for v608,v609 in ipairs(v286) do if (v609.root and v609.root.Parent and v609.esp and v609.esp:FindFirstChild("Txt")) then v609.esp.Txt.Text="[ "   .. v608   .. " ] 🌪️ TORNADO 🌪️\n"   .. math.floor((v457.Position-v609.root.Position).Magnitude)   .. " st" ;end end end if v280 then for v610,v611 in pairs(v0:GetPlayers()) do if ((v611~=v6) and v611.Character and v611.Character:FindFirstChild("Head")) then local v662=v611.Character.Head;if (v287[v611] and v287[v611]:FindFirstChild("Txt")) then v287[v611].Txt.Text="["   .. v611.Name   .. "]\n"   .. math.floor((v457.Position-v662.Position).Magnitude)   .. " st" ;end end end end end end);v235.InputBegan:Connect(function(v440) if ((v440.UserInputType==Enum.UserInputType.MouseButton1) or (v440.UserInputType==Enum.UserInputType.Touch)) then v283=true;end end);v2.InputEnded:Connect(function(v441) if ((v441.UserInputType==Enum.UserInputType.MouseButton1) or (v441.UserInputType==Enum.UserInputType.Touch)) then local v479=0 + 0 ;while true do if (v479==0) then v283=false;v284=false;break;end end end end);v271.InputBegan:Connect(function(v442) if ((v442.UserInputType==Enum.UserInputType.MouseButton1) or (v442.UserInputType==Enum.UserInputType.Touch)) then v284=true;end end);local v309=tick();local v310=86 -(84 + 2) ;v1.RenderStepped:Connect(function() if  not v274 then return;end v310=v310 + (1 -0) ;if ((tick() -v309)>=(1 + 0)) then v57.Text="Twisted RED | FPS: "   .. v310   .. " | Ping: "   .. math.floor(v5.Network.ServerStatsItem["Data Ping"]:GetValue())   .. "ms" ;v310=0;v309=tick();end local v443=v6.Character;local v444=v443 and v443:FindFirstChild("HumanoidRootPart") ;if (v281 and v289 and v289.Parent) then local v481=842 -(497 + 345) ;while true do if (v481==(0 + 0)) then if (v291.Adornee~=v289) then v291.Adornee=v289;end v291.Enabled=true;break;end end else v291.Enabled=false;end if (v280 and v444) then for v576,v577 in pairs(v0:GetPlayers()) do if ((v577~=v6) and v577.Character and v577.Character:FindFirstChild("Head") and v577.Character:FindFirstChild("Humanoid") and (v577.Character.Humanoid.Health>(0 + 0))) then if  not v287[v577] then local v688=1333 -(605 + 728) ;local v689;local v690;while true do if (v688==(2 + 0)) then v690.Name="Txt";v690.Size=UDim2.new(1 -0 ,0 + 0 ,3 -2 ,0 + 0 );v690.BackgroundTransparency=1;v690.TextColor3=v18;v688=3;end if (v688==(7 -4)) then v690.TextStrokeTransparency=0.5 + 0 ;v690.Font=Enum.Font.GothamBold;v690.TextSize=13;v287[v577]=v689;break;end if (v688==(490 -(457 + 32))) then v689.ExtentsOffset=Vector3.new(0,2 + 1 ,1402 -(832 + 570) );v689.Adornee=v577.Character.Head;v689.Parent=v26;v690=Instance.new("TextLabel",v689);v688=2 + 0 ;end if (v688==(0 + 0)) then v689=Instance.new("BillboardGui");v689.Name="PlayerESP_Red";v689.AlwaysOnTop=true;v689.Size=UDim2.new(0 -0 ,97 + 103 ,796 -(588 + 208) ,134 -84 );v688=1801 -(884 + 916) ;end end end elseif v287[v577] then v287[v577]:Destroy();v287[v577]=nil;end end end if v283 then local v483=0 -0 ;local v484;while true do if ((0 + 0)==v483) then v484=math.clamp((v302.X-v235.AbsolutePosition.X)/v235.AbsoluteSize.X ,653 -(232 + 421) ,1);v236.Size=UDim2.new(v484,1889 -(1569 + 320) ,1 + 0 ,0 + 0 );v483=3 -2 ;end if (v483==(606 -(316 + 289))) then v285=10 + (v484 * (2591 -1601)) ;v234.Text="CAR SPEED: "   .. math.floor(v285) ;break;end end end if v284 then local v485=math.clamp((v302.X-v271.AbsolutePosition.X)/v271.AbsoluteSize.X ,0 + 0 ,1454 -(666 + 787) );v272.Size=UDim2.new(v485,425 -(360 + 65) ,1,0);v22=0.5 + (v485 * (1 + 0)) ;v270.Text=string.format("UI SCALE: %.1f",v22);if v83 then local v612=254 -(79 + 175) ;local v613;while true do if (v612==0) then v613=v142:FindFirstChildWhichIsA("UIScale");if v613 then v613.Scale=v22;end break;end end end end end);v1.Heartbeat:Connect(function() if  not v274 then return;end local v445=v6.Character;if (v445 and v445:FindFirstChild("Humanoid")) then local v488=v445.Humanoid;local v489=v445:FindFirstChild("HumanoidRootPart");if v282 then if ((v488.Health>(0 -0)) and (v488.Health<v488.MaxHealth)) then v488.Health=v488.MaxHealth;end if  not v488.SeatPart then local v665=v488:GetState();if ((v665==Enum.HumanoidStateType.Ragdoll) or (v665==Enum.HumanoidStateType.FallingDown)) then v488:ChangeState(Enum.HumanoidStateType.GettingUp);end end if v489 then local v666=0 + 0 ;while true do if (v666==(0 -0)) then if (v489.AssemblyLinearVelocity.Y< -(77 -37)) then local v752=899 -(503 + 396) ;local v753;local v754;while true do if (v752==(181 -(92 + 89))) then v753=RaycastParams.new();v753.FilterDescendantsInstances={v445};v752=1;end if (v752==(3 -1)) then if v754 then v489.AssemblyLinearVelocity=Vector3.new(v489.AssemblyLinearVelocity.X, -(6 + 4),v489.AssemblyLinearVelocity.Z);end break;end if (v752==(1 + 0)) then v753.FilterType=Enum.RaycastFilterType.Exclude;v754=workspace:Raycast(v489.Position,Vector3.new(0, -(195 -145),0 + 0 ),v753);v752=4 -2 ;end end end if  not v488.SeatPart then for v764,v765 in ipairs(v489:GetChildren()) do if ((v765:IsA("BodyForce") or v765:IsA("BodyVelocity") or v765:IsA("BodyThrust") or v765:IsA("LinearVelocity") or v765:IsA("VectorForce")) and  not string.find(v765.Name,"TwistedFly")) then v765:Destroy();end end end break;end end end end if v275 then for v647,v648 in pairs(v445:GetDescendants()) do if v648:IsA("BasePart") then v648.CanCollide=false;end end end if (v276 and v488.SeatPart) then local v614=0 + 0 ;local v615;local v616;local v617;local v618;local v619;local v620;while true do if (v614==(1 + 1)) then v617.Name="TwistedFlyG";v617.MaxTorque=Vector3.new(math.huge,math.huge,math.huge);v617.P=2741105 -1841105 ;v614=1 + 2 ;end if (v614==(5 -1)) then v620=v7.CFrame;if (v90 or v2:IsKeyDown(Enum.KeyCode.Space)) then local v718=1244 -(485 + 759) ;while true do if (v718==(0 -0)) then v618=v618 + Vector3.new(1189 -(442 + 747) ,1136 -(832 + 303) ,946 -(88 + 858) ) ;v619=true;break;end end end if (v91 or v2:IsKeyDown(Enum.KeyCode.LeftShift)) then v618=v618-Vector3.new(0 + 0 ,1 + 0 ,0 + 0 ) ;v619=true;end v614=794 -(766 + 23) ;end if (0==v614) then v615=v488.SeatPart.AssemblyRootPart or v488.SeatPart ;v290=v615;v616=v615:FindFirstChild("TwistedFlyV") or Instance.new("BodyVelocity",v615) ;v614=4 -3 ;end if (v614==(7 -1)) then if v2:IsKeyDown(Enum.KeyCode.D) then v618=v618 + v620.RightVector ;v619=true;end if v619 then if (v618.Magnitude>(0 -0)) then v618=v618.Unit;end v616.Velocity=v618 * v285 ;else v616.Velocity=Vector3.new(0 -0 ,0,1073 -(1036 + 37) );v615.AssemblyLinearVelocity=Vector3.new(0 + 0 ,0 -0 ,0);v615.AssemblyAngularVelocity=Vector3.new(0 + 0 ,1480 -(641 + 839) ,0);end v617.CFrame=CFrame.new(v615.Position,v615.Position + v620.LookVector );break;end if (v614==(914 -(910 + 3))) then v617=v615:FindFirstChild("TwistedFlyG") or Instance.new("BodyGyro",v615) ;v616.Name="TwistedFlyV";v616.MaxForce=Vector3.new(math.huge,math.huge,math.huge);v614=4 -2 ;end if (v614==5) then if (v92 or v2:IsKeyDown(Enum.KeyCode.W)) then local v723=1684 -(1466 + 218) ;while true do if (v723==(0 + 0)) then v618=v618 + v620.LookVector ;v619=true;break;end end end if (v93 or v2:IsKeyDown(Enum.KeyCode.S)) then local v724=1148 -(556 + 592) ;while true do if (v724==(0 + 0)) then v618=v618-v620.LookVector ;v619=true;break;end end end if v2:IsKeyDown(Enum.KeyCode.A) then local v725=808 -(329 + 479) ;while true do if (v725==(854 -(174 + 680))) then v618=v618-v620.RightVector ;v619=true;break;end end end v614=20 -14 ;end if (v614==(5 -2)) then v617.D=500;v618=Vector3.new(0,0 + 0 ,739 -(396 + 343) );v619=false;v614=4;end end elseif v290 then local v667=0 + 0 ;while true do if (v667==1) then v290=nil;break;end if (v667==(1477 -(29 + 1448))) then if v290:FindFirstChild("TwistedFlyV") then v290.TwistedFlyV:Destroy();end if v290:FindFirstChild("TwistedFlyG") then v290.TwistedFlyG:Destroy();end v667=1390 -(135 + 1254) ;end end end end end); end
+--[[
+    ========================================================================
+    [ TWISTED UI: RGB EDITION (LANDSCAPE PRO V39) - ROLLBACK TO STABLE ]
+    Status: REVERTED TO 100% WORKING VERSION (NO UICORNER/TWEENS)
+    ========================================================================
+]]
+
+print("[TWISTED] Step 1: Initializing...")
+
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local UIS = game:GetService("UserInputService")
+local Lighting = game:GetService("Lighting")
+local TweenService = game:GetService("TweenService")
+local HttpService = game:GetService("HttpService")
+local Stats = game:GetService("Stats")
+
+print("[TWISTED] Step 2: Waiting for LocalPlayer...")
+local lp = Players.LocalPlayer
+while not lp do 
+    task.wait(0.1)
+    lp = Players.LocalPlayer 
+end
+
+local camera = workspace.CurrentCamera
+if not camera then
+    workspace:GetPropertyChangedSignal("CurrentCamera"):Wait()
+    camera = workspace.CurrentCamera
+end
+
+local function genName()
+    local chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+    local str = "GUI_"
+    for i = 1, 20 do 
+        str = str .. string.sub(chars, math.random(1, #chars), math.random(1, #chars)) 
+    end
+    return str
+end
+
+local function getTornadoWindSpeed(model)
+    local exactSpeed = nil
+    local bestSpeed = 0
+    if not model then return "???" end
+    
+    local function checkValue(name, val)
+        if type(val) == "number" and val > bestSpeed and val < 600 then
+            local n = string.lower(name)
+            if n:find("move") or n:find("walk") or n:find("rate") or n:find("particle") or n:find("pitch") or n:find("vol") then return end
+            if n == "windspeed" or n == "intensity" then 
+                exactSpeed = val 
+            elseif n:find("wind") or n:find("speed") or n:find("mph") then 
+                bestSpeed = val 
+            end
+        end
+    end
+    
+    for attr, val in pairs(model:GetAttributes()) do 
+        checkValue(attr, val) 
+    end
+    
+    for _, v in pairs(model:GetDescendants()) do
+        if v:IsA("NumberValue") or v:IsA("IntValue") then 
+            checkValue(v.Name, v.Value)
+        elseif v:IsA("StringValue") then
+            local num = tonumber(string.match(v.Value, "%d+"))
+            if num then checkValue(v.Name, num) end
+        end
+    end
+    
+    if exactSpeed then return math.floor(exactSpeed) .. " MPH" end
+    if bestSpeed > 0 then return math.floor(bestSpeed) .. " MPH" end
+    return "???"
+end
+
+-- =================[ ГРУППИРОВКА ПЕРЕМЕННЫХ ]=================
+local T = {
+    State = {
+        CarFly = false, TruckFly = false, Godmode = false, TornadoESP = false,
+        PlayerESP = false, Noclip = false, FpsBoost = false, Fullbright = false, MyCarESP = false,
+        ShowActiveMods = false
+    },
+    Pools = {
+        binds = {}, shootingStars = {}, rain = {}, snow = {}, trail = {}, cosmos = {},
+        tornados = {}, playerEsps = {}, traps = {nil, nil, nil}, welds = {}, partProps = {}, trailerData = {}, tabBtns = {},
+        sliders = {}, bgTornadoParticles = {}
+    },
+    Vars = {
+        mySmartCar = nil, origGravity = workspace.Gravity, lastMouse = Vector2.new(0,0),
+        starSpeed = 0.8, trailIdx = 1, activeTheme = "RED",
+        carSpeed = 100, truckSpeed = 100, pathLen = 15, pathWid = 12,
+        lastTScan = 0, fpsLT = tick(), frC = 0, currentBind = nil, activeSlider = nil, currentActiveTabBtn = nil,
+        Setters = {} 
+    },
+    UI = {}
+}
+
+local UI_TITLE = "TWISTED" 
+local COL_MAIN = Color3.fromRGB(255, 40, 40)      
+local COL_GRAD = Color3.fromRGB(255, 100, 100)  
+local COL_BG = Color3.fromRGB(10, 10, 14)         
+local COL_SIDEBAR = Color3.fromRGB(14, 14, 18) 
+local COL_ACT = Color3.fromRGB(200, 20, 20)       
+local COL_INACT = Color3.fromRGB(22, 22, 28)    
+local COL_STROKE = Color3.fromRGB(40, 40, 50)     
+local COL_TEXT = Color3.fromRGB(240, 240, 240)  
+
+local Themes = {
+    ["RED"] = {Main = Color3.fromRGB(255, 40, 40), Grad = Color3.fromRGB(255, 100, 100), Act = Color3.fromRGB(200, 20, 20), Str = Color3.fromRGB(60, 20, 20)},
+    ["BLUE"] = {Main = Color3.fromRGB(40, 150, 255), Grad = Color3.fromRGB(100, 200, 255), Act = Color3.fromRGB(20, 120, 200), Str = Color3.fromRGB(20, 40, 60)},
+    ["GREEN"] = {Main = Color3.fromRGB(40, 255, 80), Grad = Color3.fromRGB(100, 255, 120), Act = Color3.fromRGB(20, 200, 40), Str = Color3.fromRGB(20, 60, 20)},
+    ["PURPLE"] = {Main = Color3.fromRGB(180, 40, 255), Grad = Color3.fromRGB(220, 100, 255), Act = Color3.fromRGB(140, 20, 200), Str = Color3.fromRGB(40, 20, 60)},
+    ["ORANGE"] = {Main = Color3.fromRGB(255, 140, 40), Grad = Color3.fromRGB(255, 180, 100), Act = Color3.fromRGB(200, 100, 20), Str = Color3.fromRGB(60, 30, 20)},
+    ["PINK"] = {Main = Color3.fromRGB(255, 60, 180), Grad = Color3.fromRGB(255, 120, 200), Act = Color3.fromRGB(200, 40, 140), Str = Color3.fromRGB(60, 20, 40)},
+    ["WHITE"] = {Main = Color3.fromRGB(255, 255, 255), Grad = Color3.fromRGB(200, 200, 200), Act = Color3.fromRGB(220, 220, 220), Str = Color3.fromRGB(100, 100, 100)},
+    ["BLACK"] = {Main = Color3.fromRGB(90, 90, 90), Grad = Color3.fromRGB(60, 60, 60), Act = Color3.fromRGB(70, 70, 70), Str = Color3.fromRGB(40, 40, 40)}
+}
+
+local UI_FONT = Enum.Font.GothamMedium 
+local UI_TITLE_FONT = Enum.Font.GothamBlack 
+
+print("[TWISTED] Step 3: Resolving GUI Parent...")
+
+local targetGuiParent = game:GetService("CoreGui") or lp:WaitForChild("PlayerGui")
+local guiName = genName()
+
+pcall(function()
+    for _, v in pairs(targetGuiParent:GetChildren()) do
+        if v:IsA("ScreenGui") and v.DisplayOrder == 19992 then v:Destroy() end
+    end
+end)
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = guiName
+ScreenGui.ResetOnSpawn = false
+ScreenGui.IgnoreGuiInset = true 
+ScreenGui.DisplayOrder = 19992 
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Parent = targetGuiParent
+
+local function MakeDraggable(frame)
+    local dragging, dragInput, dragStart, startPos = false, nil, nil, nil
+    frame.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging = true
+            dragStart = input.Position
+            startPos = frame.Position
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then dragging = false end
+            end)
+        end
+    end)
+    frame.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement then dragInput = input end
+    end)
+    UIS.InputChanged:Connect(function(input)
+        if input == dragInput and dragging then
+            local delta = input.Position - dragStart
+            frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+    end)
+end
+
+-- =================[ ACTIVE MODULES HUD ]=================
+local ActiveModsFrame = Instance.new("Frame")
+ActiveModsFrame.Name = "ActiveModsFrame"
+ActiveModsFrame.Size = UDim2.new(0, 160, 0, 100)
+ActiveModsFrame.Position = UDim2.new(0, 20, 0.4, 0)
+ActiveModsFrame.BackgroundColor3 = COL_BG
+ActiveModsFrame.BackgroundTransparency = 0.2
+ActiveModsFrame.BorderSizePixel = 0
+ActiveModsFrame.Visible = false
+ActiveModsFrame.ZIndex = 150
+ActiveModsFrame.Parent = ScreenGui
+MakeDraggable(ActiveModsFrame) 
+
+local ActiveModsCorner = Instance.new("UICorner")
+ActiveModsCorner.CornerRadius = UDim.new(0, 8)
+ActiveModsCorner.Parent = ActiveModsFrame
+
+local ActiveModsStroke = Instance.new("UIStroke")
+ActiveModsStroke.Name = "Accent"
+ActiveModsStroke.Color = COL_MAIN
+ActiveModsStroke.Thickness = 1.5
+ActiveModsStroke.Parent = ActiveModsFrame
+
+local ActiveModsTitle = Instance.new("TextLabel")
+ActiveModsTitle.Name = "ColoredTitle"
+ActiveModsTitle.Size = UDim2.new(1, 0, 0, 30)
+ActiveModsTitle.BackgroundTransparency = 1
+ActiveModsTitle.Font = UI_TITLE_FONT
+ActiveModsTitle.TextSize = 12
+ActiveModsTitle.TextColor3 = COL_MAIN
+ActiveModsTitle.Text = "⚡ ACTIVE MODS"
+ActiveModsTitle.ZIndex = 151
+ActiveModsTitle.Parent = ActiveModsFrame
+
+local ActiveModsLine = Instance.new("Frame")
+ActiveModsLine.Name = "Accent" 
+ActiveModsLine.Size = UDim2.new(1, -20, 0, 1)
+ActiveModsLine.Position = UDim2.new(0, 10, 0, 30)
+ActiveModsLine.BackgroundColor3 = COL_MAIN
+ActiveModsLine.BorderSizePixel = 0
+ActiveModsLine.ZIndex = 151
+ActiveModsLine.Parent = ActiveModsFrame
+
+local ActiveModsLabel = Instance.new("TextLabel")
+ActiveModsLabel.Name = "ActiveModsText"
+ActiveModsLabel.Size = UDim2.new(1, -20, 1, -40)
+ActiveModsLabel.Position = UDim2.new(0, 10, 0, 35)
+ActiveModsLabel.BackgroundTransparency = 1
+ActiveModsLabel.Font = UI_FONT
+ActiveModsLabel.TextSize = 12
+ActiveModsLabel.TextColor3 = COL_TEXT
+ActiveModsLabel.TextXAlignment = Enum.TextXAlignment.Left
+ActiveModsLabel.TextYAlignment = Enum.TextYAlignment.Top
+ActiveModsLabel.Text = ""
+ActiveModsLabel.ZIndex = 151
+ActiveModsLabel.Parent = ActiveModsFrame
+
+local myCarHighlight = Instance.new("Highlight")
+myCarHighlight.Name = "TwistedCarESP"
+myCarHighlight.Adornee = nil 
+myCarHighlight.FillColor = COL_MAIN
+myCarHighlight.OutlineColor = COL_MAIN
+myCarHighlight.FillTransparency = 0.5
+myCarHighlight.OutlineTransparency = 0.1
+myCarHighlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+myCarHighlight.Enabled = false
+if camera then 
+    myCarHighlight.Parent = camera 
+else 
+    myCarHighlight.Parent = ScreenGui 
+end
+
+local NotifyContainer = Instance.new("Frame")
+NotifyContainer.Size = UDim2.new(0, 300, 1, -40)
+NotifyContainer.Position = UDim2.new(1, -310, 0, 20)
+NotifyContainer.BackgroundTransparency = 1
+NotifyContainer.ZIndex = 200
+NotifyContainer.Parent = ScreenGui
+
+local NList = Instance.new("UIListLayout")
+NList.SortOrder = Enum.SortOrder.LayoutOrder
+NList.Padding = UDim.new(0, 8)
+NList.HorizontalAlignment = Enum.HorizontalAlignment.Right
+NList.VerticalAlignment = Enum.VerticalAlignment.Bottom
+NList.Parent = NotifyContainer
+
+local function SendNotification(text)
+    local toast = Instance.new("Frame")
+    toast.BackgroundColor3 = COL_BG
+    toast.BackgroundTransparency = 0.1
+    toast.ClipsDescendants = true
+    toast.BorderSizePixel = 0
+    toast.ZIndex = 200
+    
+    local stroke = Instance.new("UIStroke")
+    stroke.Color = COL_STROKE
+    stroke.Thickness = 1.5
+    stroke.Parent = toast
+    
+    local accent = Instance.new("Frame")
+    accent.Size = UDim2.new(0, 3, 1, 0)
+    accent.BackgroundColor3 = COL_MAIN
+    accent.BorderSizePixel = 0
+    accent.ZIndex = 201
+    accent.Parent = toast
+    
+    local lbl = Instance.new("TextLabel")
+    lbl.Size = UDim2.new(1, -25, 1, -4)
+    lbl.Position = UDim2.new(0, 15, 0, 0)
+    lbl.BackgroundTransparency = 1
+    lbl.Text = text
+    lbl.TextColor3 = COL_TEXT
+    lbl.Font = UI_TITLE_FONT
+    lbl.TextSize = 13
+    lbl.TextXAlignment = Enum.TextXAlignment.Left
+    lbl.ZIndex = 201
+    lbl.Parent = toast
+    
+    local timerBar = Instance.new("Frame")
+    timerBar.Size = UDim2.new(1, 0, 0, 2)
+    timerBar.Position = UDim2.new(0, 0, 1, -2)
+    timerBar.BackgroundColor3 = COL_MAIN
+    timerBar.BorderSizePixel = 0
+    timerBar.ZIndex = 201
+    timerBar.Parent = toast
+    
+    toast.Size = UDim2.new(0, math.clamp(lbl.TextBounds.X + 40, 150, 300), 0, 45)
+    toast.Parent = NotifyContainer
+    
+    TweenService:Create(timerBar, TweenInfo.new(3.5, Enum.EasingStyle.Linear), {Size = UDim2.new(0, 0, 0, 2)}):Play()
+    task.delay(3.5, function() 
+        if toast then toast:Destroy() end 
+    end)
+end
+
+local Watermark = Instance.new("Frame")
+Watermark.Size = UDim2.new(0, 280, 0, 32)
+Watermark.Position = UDim2.new(0, 20, 0, 20)
+Watermark.BackgroundColor3 = COL_BG
+Watermark.BackgroundTransparency = 0.2
+Watermark.BorderSizePixel = 0
+Watermark.Visible = false
+Watermark.ZIndex = 100
+Watermark.Parent = ScreenGui
+MakeDraggable(Watermark)
+
+local wmStroke = Instance.new("UIStroke")
+wmStroke.Color = COL_STROKE
+wmStroke.Thickness = 1.5
+wmStroke.Parent = Watermark
+
+local WmText = Instance.new("TextLabel")
+WmText.Name = "WmText"
+WmText.Size = UDim2.new(1, -20, 1, 0)
+WmText.Position = UDim2.new(0, 10, 0, 0)
+WmText.BackgroundTransparency = 1
+WmText.Font = UI_FONT
+WmText.TextSize = 13
+WmText.TextColor3 = COL_TEXT
+WmText.TextXAlignment = Enum.TextXAlignment.Left
+WmText.Text = "Twisted XENO | FPS: 0"
+WmText.ZIndex = 101
+WmText.Parent = Watermark
+
+local WmAccent = Instance.new("Frame")
+WmAccent.Name = "Accent"
+WmAccent.Size = UDim2.new(0, 3, 1, 0)
+WmAccent.BackgroundColor3 = COL_MAIN
+WmAccent.BorderSizePixel = 0
+WmAccent.ZIndex = 101
+WmAccent.Parent = Watermark
+
+-- =================[ ГЛАВНАЯ ПАНЕЛЬ МЕНЮ И ФОНЫ ]=================
+local MainFrame = Instance.new("Frame")
+MainFrame.Name = "TwistedMainFrame"
+MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+MainFrame.Size = UDim2.new(0, 600, 0, 380)
+MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+MainFrame.BackgroundTransparency = 1
+MainFrame.Visible = false
+MainFrame.Active = true
+MainFrame.ZIndex = 20
+MainFrame.Parent = ScreenGui
+MakeDraggable(MainFrame) 
+
+local MainFrameStroke = Instance.new("UIStroke")
+MainFrameStroke.Color = COL_MAIN
+MainFrameStroke.Thickness = 2
+MainFrameStroke.Parent = MainFrame
+
+local function MakeBg(name, vis, z, isBlack, useCanvasGroup)
+    local f
+    if useCanvasGroup then
+        local s = pcall(function() f = Instance.new("CanvasGroup") end)
+        if not s or not f then f = Instance.new("Frame") end
+    else
+        f = Instance.new("Frame")
+    end
+    f.Name = name
+    f.Size = UDim2.new(0, 600, 0, 380)
+    f.BackgroundColor3 = isBlack and Color3.new(0,0,0) or COL_BG
+    f.BackgroundTransparency = 0
+    f.BorderSizePixel = 0
+    f.ZIndex = z or 10
+    f.Visible = vis
+    f.ClipsDescendants = true
+    f.Parent = MainFrame
+    return f
+end
+
+local SolidBg = MakeBg("SolidBg", true, 10, false, false)
+local TransBg = MakeBg("TransBg", false, 10, false, false)
+TransBg.BackgroundTransparency = 0.2
+
+local TrailPanelBg = MakeBg("TrailPanelBg", false, 10, true, false) 
+local StarsBg = MakeBg("StarsBg", false, 11, true, true) 
+local RainBg = MakeBg("RainBg", false, 11, true, true)  
+local SnowBg = MakeBg("SnowBg", false, 11, true, true)  
+local CosmosBg = MakeBg("CosmosBg", false, 11, true, true) 
+
+local TornadoBgBg = MakeBg("TornadoBgBg", false, 11, true, true)
+TornadoBgBg.BackgroundColor3 = Color3.fromRGB(5, 5, 8) 
+
+local GradBg = MakeBg("GradBg", false, 10, false, false)
+GradBg.BackgroundColor3 = Color3.new(1, 1, 1)
+
+local BgGrad = Instance.new("UIGradient")
+BgGrad.Color = ColorSequence.new({
+    ColorSequenceKeypoint.new(0, Color3.new(0,0,0)), 
+    ColorSequenceKeypoint.new(0.48, COL_MAIN), 
+    ColorSequenceKeypoint.new(0.52, COL_MAIN), 
+    ColorSequenceKeypoint.new(1, Color3.new(0,0,0))
+})
+BgGrad.Parent = GradBg
+
+local MouseBg = Instance.new("Frame")
+MouseBg.Size = UDim2.new(1, 0, 1, 0)
+MouseBg.BackgroundTransparency = 1
+MouseBg.ZIndex = 9999
+MouseBg.Visible = false
+MouseBg.Parent = ScreenGui
+
+for i = 1, 20 do
+    local star = Instance.new("Frame")
+    star.BackgroundColor3 = Color3.new(1, 1, 1)
+    star.BorderSizePixel = 0
+    star.ZIndex = 11
+    
+    local grad = Instance.new("UIGradient")
+    grad.Color = ColorSequence.new(COL_MAIN)
+    grad.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(1, 0)})
+    grad.Parent = star
+    
+    star.Position = UDim2.new(math.random(-50, 50)/100, 0, math.random(-50, 50)/100, 0)
+    star.Parent = StarsBg
+    
+    local spX = (math.random(20, 40) / 100) * T.Vars.starSpeed
+    local spY = (math.random(20, 40) / 100) * T.Vars.starSpeed
+    star.Rotation = math.deg(math.atan2(spY, spX))
+    star.Size = UDim2.new(0, math.random(15, 35), 0, math.random(2, 3))
+    table.insert(T.Pools.shootingStars, { obj = star, grad = grad, sx = spX, sy = spY, isActive = false })
+end
+
+for i = 1, 40 do
+    local drop = Instance.new("Frame")
+    drop.Name = "Accent"
+    drop.BackgroundColor3 = COL_MAIN
+    drop.BorderSizePixel = 0
+    drop.ZIndex = 11
+    drop.Size = UDim2.new(0, 1, 0, math.random(15, 30))
+    drop.Position = UDim2.new(math.random(), 0, math.random(), 0)
+    drop.Parent = RainBg
+    table.insert(T.Pools.rain, { obj = drop, speed = math.random(15, 25) / 10 })
+end
+
+for i = 1, 30 do
+    local flake = Instance.new("Frame")
+    flake.Name = "Accent"
+    flake.BackgroundColor3 = COL_MAIN
+    flake.BorderSizePixel = 0
+    flake.ZIndex = 11
+    flake.Size = UDim2.new(0, math.random(2, 4), 0, math.random(2, 4))
+    flake.Position = UDim2.new(math.random(), 0, math.random(), 0)
+    flake.Parent = SnowBg
+    table.insert(T.Pools.snow, { obj = flake, speed = math.random(2, 6) / 10, phase = math.random() * math.pi * 2 })
+end
+
+for i = 1, 50 do
+    local cStar = Instance.new("Frame")
+    cStar.Name = "Accent"
+    cStar.BackgroundColor3 = COL_MAIN
+    cStar.BorderSizePixel = 0
+    cStar.ZIndex = 11
+    cStar.AnchorPoint = Vector2.new(0.5, 0.5)
+    cStar.Parent = CosmosBg
+    table.insert(T.Pools.cosmos, { obj = cStar, x = (math.random() - 0.5) * 2, y = (math.random() - 0.5) * 2, z = math.random(), speed = math.random(5, 25) / 10 })
+end
+
+for i = 1, 15 do
+    local tr = Instance.new("Frame")
+    tr.Name = "Accent"
+    tr.BackgroundColor3 = COL_MAIN
+    tr.AnchorPoint = Vector2.new(0.5, 0.5)
+    tr.Size = UDim2.new(0, 0, 0, 0)
+    tr.BorderSizePixel = 0
+    tr.ZIndex = 9999
+    tr.Visible = false
+    tr.Parent = MouseBg
+    table.insert(T.Pools.trail, tr)
+end
+
+-- =================[ ГЕНЕРАЦИЯ ЧАСТИЦ TORNADO ]=================
+for i = 1, 150 do
+    local p = Instance.new("Frame")
+    p.Name = "TornadoParticle"
+    p.BackgroundColor3 = COL_MAIN
+    p.BorderSizePixel = 0
+    p.ZIndex = 12
+    p.AnchorPoint = Vector2.new(0.5, 0.5)
+    
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(1, 0) 
+    corner.Parent = p
+    
+    p.Parent = TornadoBgBg
+    
+    local angleOffset = math.random() * math.pi * 2
+    local verticalRelPos = math.random() 
+    
+    local curve = (1 - verticalRelPos) ^ 1.5 
+    local radius = 10 + (curve * 220) 
+    local baseWidth = math.random(15, 40) + (curve * 50) 
+    
+    table.insert(T.Pools.bgTornadoParticles, {
+        obj = p,
+        angOffset = angleOffset,
+        yRel = verticalRelPos,
+        baseWidth = baseWidth,
+        radius = radius,
+        rotSpeed = 1.5 + (verticalRelPos * 3.5), 
+    })
+end
+
+-- =================[ ВКЛАДКИ И КНОПКИ МЕНЮ ]=================
+local Sidebar = Instance.new("Frame")
+Sidebar.Size = UDim2.new(0, 160, 0, 380)
+Sidebar.BackgroundColor3 = COL_SIDEBAR
+Sidebar.BorderSizePixel = 0
+Sidebar.ZIndex = 20
+Sidebar.Parent = MainFrame
+
+local SidebarLine = Instance.new("Frame")
+SidebarLine.Size = UDim2.new(0, 1, 0, 380)
+SidebarLine.Position = UDim2.new(0, 159, 0, 0)
+SidebarLine.BackgroundColor3 = COL_STROKE
+SidebarLine.BorderSizePixel = 0
+SidebarLine.ZIndex = 21
+SidebarLine.Parent = Sidebar
+
+local Title = Instance.new("TextLabel")
+Title.Size = UDim2.new(0, 160, 0, 50)
+Title.Position = UDim2.new(0, 0, 0, 10)
+Title.Text = UI_TITLE
+Title.TextColor3 = COL_MAIN
+Title.BackgroundTransparency = 1
+Title.Font = UI_TITLE_FONT
+Title.TextSize = 24
+Title.ZIndex = 25
+Title.Parent = Sidebar
+
+local TitleGrad = Instance.new("UIGradient")
+TitleGrad.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, COL_MAIN), ColorSequenceKeypoint.new(1, COL_GRAD)}
+TitleGrad.Parent = Title
+
+local SubTitle = Instance.new("TextLabel")
+SubTitle.Size = UDim2.new(0, 160, 0, 15)
+SubTitle.Position = UDim2.new(0, 0, 0, 45)
+SubTitle.Text = "Premium"
+SubTitle.TextColor3 = COL_TEXT
+SubTitle.BackgroundTransparency = 1
+SubTitle.Font = UI_FONT
+SubTitle.TextSize = 11
+SubTitle.TextTransparency = 0.4
+SubTitle.ZIndex = 25
+SubTitle.Parent = Sidebar
+
+local TabsContainer = Instance.new("Frame")
+TabsContainer.Size = UDim2.new(0, 160, 0, 300)
+TabsContainer.Position = UDim2.new(0, 0, 0, 75)
+TabsContainer.BackgroundTransparency = 1
+TabsContainer.ZIndex = 25
+TabsContainer.Parent = Sidebar
+
+local UIListLayoutTabs = Instance.new("UIListLayout")
+UIListLayoutTabs.FillDirection = Enum.FillDirection.Vertical
+UIListLayoutTabs.Padding = UDim.new(0, 5)
+UIListLayoutTabs.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayoutTabs.Parent = TabsContainer
+
+local ContentContainer = Instance.new("Frame")
+ContentContainer.Size = UDim2.new(0, 440, 0, 380)
+ContentContainer.Position = UDim2.new(0, 160, 0, 0)
+ContentContainer.BackgroundTransparency = 1
+ContentContainer.ZIndex = 20
+ContentContainer.Parent = MainFrame
+
+local function createTabBtn(name)
+    local btn = Instance.new("TextButton")
+    btn.Size = UDim2.new(0, 140, 0, 32)
+    btn.BackgroundColor3 = COL_INACT
+    btn.BorderSizePixel = 0
+    btn.Text = "   " .. name
+    btn.TextColor3 = COL_TEXT
+    btn.Font = UI_TITLE_FONT
+    btn.TextSize = 11
+    btn.TextXAlignment = Enum.TextXAlignment.Left
+    btn.AutoButtonColor = false
+    btn.ZIndex = 30
+    
+    local stroke = Instance.new("UIStroke")
+    stroke.Color = COL_STROKE
+    stroke.Thickness = 1
+    stroke.Parent = btn
+    
+    local indicator = Instance.new("Frame")
+    indicator.Name = "Indicator"
+    indicator.Size = UDim2.new(0, 3, 0, 32)
+    indicator.BackgroundColor3 = COL_MAIN
+    indicator.BorderSizePixel = 0
+    indicator.BackgroundTransparency = 1
+    indicator.ZIndex = 31
+    indicator.Parent = btn
+    
+    btn.Parent = TabsContainer
+    table.insert(T.Pools.tabBtns, {btn = btn, ind = indicator})
+    return btn, indicator
+end
+
+local function makeTab() 
+    local t = Instance.new("ScrollingFrame")
+    t.Size = UDim2.new(0, 440, 0, 360)
+    t.Position = UDim2.new(0, 0, 0, 10)
+    t.BackgroundTransparency = 1
+    t.Visible = false
+    t.ScrollBarThickness = 3
+    t.ScrollBarImageColor3 = COL_MAIN
+    t.BorderSizePixel = 0
+    t.ZIndex = 30
+    t.CanvasSize = UDim2.new(0, 0, 0, 600) 
+    
+    local pad = Instance.new("UIPadding")
+    pad.PaddingLeft = UDim.new(0, 20)
+    pad.PaddingRight = UDim.new(0, 20)
+    pad.PaddingTop = UDim.new(0, 10)
+    pad.PaddingBottom = UDim.new(0, 10)
+    pad.Parent = t
+    
+    local layout = Instance.new("UIListLayout")
+    layout.SortOrder = Enum.SortOrder.LayoutOrder
+    layout.Padding = UDim.new(0, 10)
+    layout.Parent = t
+    
+    t.Parent = ContentContainer
+    return t 
+end
+
+local TabInfoBtn, IndInfo = createTabBtn("INFORMATION")
+local TabLocalBtn, IndLocal = createTabBtn("LOCAL PLAYER")
+local TabTruckBtn, IndTruck = createTabBtn("TRUCK FARM")
+local TabTpBtn, IndTp = createTabBtn("TELEPORTS")
+local TabCustomizeBtn, IndCust = createTabBtn("SETTINGS") 
+local TabThemesBtn, IndTheme = createTabBtn("THEMES & UI") 
+
+local TabInfo = makeTab()
+TabInfo.Visible = true
+
+local TabLocal = makeTab()
+local TabTruck = makeTab()
+local TabTp = makeTab()
+local TabCustomize = makeTab()
+local TabThemes = makeTab()
+
+local allTabs = {TabInfo, TabLocal, TabTruck, TabTp, TabCustomize, TabThemes}
+T.Vars.currentActiveTabBtn = TabInfoBtn
+
+IndInfo.BackgroundTransparency = 0
+TabInfoBtn.BackgroundColor3 = COL_ACT
+TabInfoBtn.TextColor3 = COL_TEXT
+TabInfoBtn.UIStroke.Color = COL_MAIN 
+
+local InfoText = Instance.new("TextLabel")
+InfoText.Size = UDim2.new(0, 400, 0, 250)
+InfoText.BackgroundTransparency = 1
+InfoText.ZIndex = 50
+InfoText.Text = "Twisted V12.0 [XENO FINAL BUILD]\n\nCreated by: AME52\n\n• [DELETE] - Hide/Show Menu.\n• [ - ] -> Click to Bind a Key.\n\n[🚚] NEW: Truck Farm Tab (WELD FIX)\n[🛡] FIX: Safe Startup (No Crashes)\n[🚗] ESP: Highlight Works Everywhere\n[🌪] Tornado: Trajectories & Speed ON\n[📁] FIX: Draggable Active Mods Cloud\n[🎨] FIX: SCROLLBAR & TORNADO FIX"
+InfoText.TextColor3 = COL_TEXT
+InfoText.Font = UI_FONT
+InfoText.TextSize = 13
+InfoText.TextYAlignment = Enum.TextYAlignment.Top
+InfoText.TextXAlignment = Enum.TextXAlignment.Left
+InfoText.Parent = TabInfo
+
+local function createRow(parent)
+    local f = Instance.new("Frame")
+    f.Size = UDim2.new(0, 400, 0, 38)
+    f.BackgroundTransparency = 1
+    f.ZIndex = 35
+    
+    local l = Instance.new("UIListLayout")
+    l.FillDirection = Enum.FillDirection.Horizontal
+    l.Padding = UDim.new(0, 10)
+    l.Parent = f
+    f.Parent = parent
+    return f
+end
+
+local function createBtn(name, parent, isFull, isThemeOrBg)
+    local b = Instance.new("TextButton")
+    b.Size = isFull and UDim2.new(0, 400, 0, 38) or UDim2.new(0, 195, 0, 38)
+    b:SetAttribute("FeatureName", string.split(name, ":")[1] or name)
+    b.BackgroundColor3 = COL_INACT
+    b.Text = "   " .. name
+    b.TextColor3 = COL_TEXT
+    b.Font = UI_FONT
+    b.TextSize = 13
+    b.TextXAlignment = Enum.TextXAlignment.Left
+    b.AutoButtonColor = false
+    b.BorderSizePixel = 0
+    b.ZIndex = 35
+    
+    local bStroke = Instance.new("UIStroke")
+    bStroke.Color = COL_STROKE
+    bStroke.Thickness = 1
+    bStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    bStroke.Parent = b
+    
+    b.Parent = parent
+    if not isThemeOrBg then
+        local bindLbl = Instance.new("TextButton")
+        bindLbl.Name = "BindLabel"
+        bindLbl.Size = UDim2.new(0, 40, 0, 38)
+        bindLbl.Position = UDim2.new(0, b.Size.X.Offset - 45, 0, 0)
+        bindLbl.BackgroundTransparency = 1
+        bindLbl.Text = "[-]"
+        bindLbl.TextColor3 = Color3.fromRGB(100, 100, 100)
+        bindLbl.Font = UI_FONT
+        bindLbl.TextSize = 11
+        bindLbl.ZIndex = 36
+        bindLbl.Parent = b
+        table.insert(T.Pools.binds, b)
+    end
+    return b
+end
+
+local function createSliderBox(name, parent, min, max, default, isFloat, callback)
+    local f = Instance.new("Frame")
+    f.Size = UDim2.new(0, 400, 0, 50)
+    f.BackgroundTransparency = 1
+    f.ZIndex = 35
+    f.Parent = parent
+    
+    local l = Instance.new("TextLabel")
+    l.Size = UDim2.new(0, 400, 0, 18)
+    l.TextColor3 = COL_MAIN
+    l.BackgroundTransparency = 1
+    l.Font = UI_FONT
+    l.TextSize = 13
+    l.TextXAlignment = Enum.TextXAlignment.Left
+    l.ZIndex = 36
+    l.Parent = f
+    
+    local bg = Instance.new("Frame")
+    bg.Size = UDim2.new(0, 400, 0, 24)
+    bg.Position = UDim2.new(0, 0, 0, 24)
+    bg.BackgroundColor3 = COL_INACT
+    bg.BorderSizePixel = 0
+    bg.ZIndex = 35
+    bg.Parent = f
+    
+    local bStroke = Instance.new("UIStroke")
+    bStroke.Color = COL_STROKE
+    bStroke.Thickness = 1
+    bStroke.Parent = bg
+    
+    local fill = Instance.new("Frame")
+    fill.BackgroundColor3 = COL_MAIN
+    fill.BorderSizePixel = 0
+    fill.ZIndex = 36
+    fill.Parent = bg
+    
+    local btn = Instance.new("TextButton")
+    btn.Text = ""
+    btn.BackgroundTransparency = 1
+    btn.Size = UDim2.new(1, 0, 1, 0)
+    btn.ZIndex = 40
+    btn.Parent = bg
+    
+    table.insert(T.Pools.sliders, {lbl = l, bg = bg, stroke = bStroke, fill = fill})
+    
+    local function setVal(v)
+        v = math.clamp(v, min, max)
+        local pct = (v - min) / (max - min)
+        fill.Size = UDim2.new(pct, 0, 1, 0)
+        l.Text = name .. (isFloat and string.format("%.1f", v) or math.floor(v))
+        callback(v)
+    end
+    setVal(default)
+    
+    btn.InputBegan:Connect(function(input) 
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then 
+            T.Vars.activeSlider = {btn=btn, fill=fill, lbl=l, min=min, max=max, isFloat=isFloat, cb=callback, name=name} 
+        end 
+    end)
+    return setVal
+end
+
+-- =================[ СОЗДАНИЕ UI И КНОПОК ]=================
+local row
+
+row = createRow(TabLocal)
+T.UI.CarFlyBtn = createBtn("CAR FLY: OFF", row, false, false)
+T.UI.NoclipBtn = createBtn("NOCLIP: OFF", row, false, false)
+
+row = createRow(TabLocal)
+T.UI.GodmodeBtn = createBtn("GODMODE: OFF", row, false, false)
+T.UI.FpsBoostBtn = createBtn("FPS BOOST: OFF", row, false, false)
+
+row = createRow(TabLocal)
+T.UI.FullbrightBtn = createBtn("FULLBRIGHT: OFF", row, false, false)
+T.UI.TornadoEspBtn = createBtn("TORNADO ESP: OFF", row, false, false)
+
+row = createRow(TabLocal)
+T.UI.PlayerEspBtn = createBtn("PLAYER ESP: OFF", row, false, false)
+T.UI.MyCarEspBtn = createBtn("MY CAR ESP: OFF", row, false, false)
+
+T.Vars.Setters.carSpeed = createSliderBox("CAR FLY SPEED: ", TabLocal, 10, 1000, 100, false, function(v) T.Vars.carSpeed = v end)
+
+local lblTruckFly = Instance.new("TextLabel")
+lblTruckFly.Name = "ColoredTitle"
+lblTruckFly.Size = UDim2.new(0, 400, 0, 20)
+lblTruckFly.BackgroundTransparency = 1
+lblTruckFly.Text = "✈️ TRUCK FLY SETTINGS:"
+lblTruckFly.TextColor3 = COL_MAIN
+lblTruckFly.Font = UI_TITLE_FONT
+lblTruckFly.TextSize = 13
+lblTruckFly.TextXAlignment = Enum.TextXAlignment.Left
+lblTruckFly.ZIndex = 40
+lblTruckFly.Parent = TabTruck
+
+T.UI.TruckFlyBtn = createBtn("TRUCK FLY: OFF", createRow(TabTruck), true, false)
+T.Vars.Setters.truckSpeed = createSliderBox("TRUCK FLY SPEED: ", TabTruck, 10, 1000, 100, false, function(v) T.Vars.truckSpeed = v end)
+
+local lblTruckTp = Instance.new("TextLabel")
+lblTruckTp.Name = "ColoredTitle"
+lblTruckTp.Size = UDim2.new(0, 400, 0, 20)
+lblTruckTp.BackgroundTransparency = 1
+lblTruckTp.Text = "📍 TRUCK TELEPORTS:"
+lblTruckTp.TextColor3 = COL_MAIN
+lblTruckTp.Font = UI_TITLE_FONT
+lblTruckTp.TextSize = 13
+lblTruckTp.TextXAlignment = Enum.TextXAlignment.Left
+lblTruckTp.ZIndex = 40
+lblTruckTp.Parent = TabTruck
+
+T.UI.ViroquaBtn = createBtn("VIROQUA CHEROKEE COUNTY", createRow(TabTruck), true, false)
+T.UI.TruckJobBtn = createBtn("TRUCK JOB", createRow(TabTruck), true, false)
+T.UI.HibinBtn = createBtn("HIBIN", createRow(TabTruck), true, false)
+
+T.UI.PriorLakeBtn = createBtn("PRIOR LAKE", createRow(TabTp), true, false)
+T.UI.HazeltonBtn = createBtn("HAZELTON", createRow(TabTp), true, false)
+T.UI.HibbingBtn = createBtn("HIBBING", createRow(TabTp), true, false)
+
+row = createRow(TabTp)
+T.UI.TornadoIdInput = Instance.new("TextBox")
+T.UI.TornadoIdInput.Size = UDim2.new(0, 90, 0, 38)
+T.UI.TornadoIdInput.BackgroundColor3 = COL_INACT
+T.UI.TornadoIdInput.BorderSizePixel = 0
+T.UI.TornadoIdInput.Text = ""
+T.UI.TornadoIdInput.PlaceholderText = "ID"
+T.UI.TornadoIdInput.TextColor3 = COL_TEXT
+T.UI.TornadoIdInput.Font = UI_FONT
+T.UI.TornadoIdInput.TextSize = 14
+T.UI.TornadoIdInput.ZIndex = 40
+T.UI.TornadoIdInput.ClearTextOnFocus = false
+T.UI.TornadoIdInput.TextEditable = true
+T.UI.TornadoIdInput.Parent = row
+
+Instance.new("UIStroke", T.UI.TornadoIdInput).Color = COL_STROKE
+T.UI.TornadoIdInput.UIStroke.Thickness = 1
+
+T.UI.TpToTornadoBtn = createBtn("TP TO TORNADO", row, false, false)
+T.UI.TpToTornadoBtn.Size = UDim2.new(0, 300, 0, 38) 
+
+T.UI.TpToCarBtn = createBtn("TP TO MY CAR", createRow(TabTp), true, false)
+row = createRow(TabTp)
+T.UI.SetTrap1Btn = createBtn("SET TRAP 1", row, false, false)
+T.UI.TpTrap1Btn = createBtn("TP TRAP 1", row, false, false)
+
+row = createRow(TabTp)
+T.UI.SetTrap2Btn = createBtn("SET TRAP 2", row, false, false)
+T.UI.TpTrap2Btn = createBtn("TP TRAP 2", row, false, false)
+
+row = createRow(TabTp)
+T.UI.SetTrap3Btn = createBtn("SET TRAP 3", row, false, false)
+T.UI.TpTrap3Btn = createBtn("TP TRAP 3", row, false, false)
+
+local cfgLbl = Instance.new("TextLabel")
+cfgLbl.Name = "ColoredTitle"
+cfgLbl.Size = UDim2.new(0, 400, 0, 20)
+cfgLbl.BackgroundTransparency = 1
+cfgLbl.Text = "⚙️ HUD SETTINGS:"
+cfgLbl.TextColor3 = COL_MAIN
+cfgLbl.Font = UI_TITLE_FONT
+cfgLbl.TextSize = 13
+cfgLbl.TextXAlignment = Enum.TextXAlignment.Left
+cfgLbl.ZIndex = 40
+cfgLbl.Parent = TabCustomize
+
+row = createRow(TabCustomize)
+T.UI.ActiveModsBtn = createBtn("ACTIVE MODULES: OFF", row, true, false)
+
+T.Vars.Setters.pathLen = createSliderBox("PATH LENGTH: ", TabCustomize, 5, 60, 15, false, function(v) T.Vars.pathLen = v end)
+T.Vars.Setters.pathWid = createSliderBox("PATH WIDTH: ", TabCustomize, 2, 100, 12, false, function(v) T.Vars.pathWid = v end)
+
+local bgLabel = Instance.new("TextLabel")
+bgLabel.Name = "ColoredTitle"
+bgLabel.Size = UDim2.new(0, 400, 0, 20)
+bgLabel.BackgroundTransparency = 1
+bgLabel.Text = "Background Settings:"
+bgLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
+bgLabel.Font = UI_FONT
+bgLabel.TextSize = 12
+bgLabel.TextXAlignment = Enum.TextXAlignment.Left
+bgLabel.ZIndex = 40
+bgLabel.Parent = TabThemes
+
+row = createRow(TabThemes)
+T.UI.btnBgSolid = createBtn("BG SOLID", row, false, true)
+T.UI.btnBgTrans = createBtn("BG TRANS", row, false, true)
+
+row = createRow(TabThemes)
+T.UI.btnBgGrad = createBtn("BG GRADIENT", row, false, true)
+T.UI.btnBgStars = createBtn("BG STARS", row, false, true)
+
+row = createRow(TabThemes)
+T.UI.btnBgRain = createBtn("BG RAIN", row, false, true)
+T.UI.btnBgSnow = createBtn("BG SNOW", row, false, true)
+
+row = createRow(TabThemes)
+T.UI.btnBgCosmos = createBtn("BG COSMOS", row, false, true)
+T.UI.btnBgMouse = createBtn("BG TRAIL", row, false, true)
+
+row = createRow(TabThemes)
+T.UI.btnBgTornado = createBtn("BG TORNADO", row, true, true)
+
+local themeLabel = Instance.new("TextLabel")
+themeLabel.Name = "ColoredTitle"
+themeLabel.Size = UDim2.new(0, 400, 0, 20)
+themeLabel.BackgroundTransparency = 1
+themeLabel.Text = "UI Themes:"
+themeLabel.TextColor3 = Color3.fromRGB(150, 150, 150)
+themeLabel.Font = UI_FONT
+themeLabel.TextSize = 12
+themeLabel.TextXAlignment = Enum.TextXAlignment.Left
+themeLabel.ZIndex = 40
+themeLabel.Parent = TabThemes
+
+row = createRow(TabThemes)
+T.UI.btnRed = createBtn("THEME RED", row, false, true)
+T.UI.btnBlue = createBtn("THEME BLUE", row, false, true)
+
+row = createRow(TabThemes)
+T.UI.btnGreen = createBtn("THEME GREEN", row, false, true)
+T.UI.btnPurple = createBtn("THEME PURPLE", row, false, true)
+
+row = createRow(TabThemes)
+T.UI.btnOrange = createBtn("THEME ORANGE", row, false, true)
+T.UI.btnPink = createBtn("THEME PINK", row, false, true)
+
+row = createRow(TabThemes)
+T.UI.btnWhite = createBtn("THEME WHITE", row, false, true)
+T.UI.btnBlack = createBtn("THEME BLACK", row, false, true)
+
+-- =================[ ИСПРАВЛЕННАЯ ЛОГИКА ТЕМ ]=================
+local function ChangeTheme(themeName)
+    local t = Themes[themeName]
+    if not t then return end
+    COL_MAIN = t.Main; COL_GRAD = t.Grad; COL_ACT = t.Act; COL_STROKE = t.Str
+    T.Vars.activeTheme = themeName
+    
+    pcall(function() Title.TextColor3 = COL_MAIN end)
+    pcall(function() TitleGrad.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, COL_MAIN), ColorSequenceKeypoint.new(1, COL_GRAD)} end)
+    pcall(function() SidebarLine.BackgroundColor3 = COL_STROKE end)
+    pcall(function() MainFrameStroke.Color = COL_MAIN end)
+    pcall(function() BgGrad.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0,0,0)), ColorSequenceKeypoint.new(0.48, COL_MAIN), ColorSequenceKeypoint.new(0.52, COL_MAIN), ColorSequenceKeypoint.new(1, Color3.new(0,0,0))}) end)
+    pcall(function() myCarHighlight.FillColor = COL_MAIN; myCarHighlight.OutlineColor = COL_MAIN end)
+    
+    pcall(function() ActiveModsStroke.Color = COL_MAIN end)
+    pcall(function() ActiveModsTitle.TextColor3 = COL_MAIN end)
+    pcall(function() ActiveModsLine.BackgroundColor3 = COL_MAIN end)
+    
+    local KeyFrame = ScreenGui:FindFirstChild("KeyFrame")
+    if KeyFrame then
+        pcall(function() KeyFrame.KeyFrameStroke.Color = COL_MAIN end)
+        pcall(function() KeyFrame.KeyTitle.TextColor3 = COL_MAIN end)
+        pcall(function() KeyFrame.VerifyButton.KeyBtnStroke.Color = COL_MAIN end)
+        pcall(function() KeyFrame.KeyInput.KeyInputStroke.Color = COL_STROKE end)
+    end
+    
+    for _, s in ipairs(T.Pools.sliders) do
+        pcall(function()
+            s.bg.BackgroundColor3 = COL_INACT
+            s.fill.BackgroundColor3 = COL_MAIN
+            s.stroke.Color = COL_STROKE
+            s.lbl.TextColor3 = COL_MAIN 
+        end)
+    end
+    
+    for _, v in pairs(ScreenGui:GetDescendants()) do
+        pcall(function()
+            if v:IsA("ScrollingFrame") then
+                v.ScrollBarImageColor3 = COL_MAIN
+            end
+            
+            if v.Name == "Accent" or v.Name == "TimerBar" or v.Name == "TornadoParticle" then 
+                if v:IsA("Frame") then v.BackgroundColor3 = COL_MAIN end
+            end
+            
+            if v.Name == "Indicator" and v.BackgroundTransparency == 0 then 
+                v.BackgroundColor3 = COL_MAIN
+            end
+
+            if v:IsA("TextLabel") and (v.Name == "ColoredTitle" or v.Name == "PEspTxt" or v.Name == "T_ESP_2D") then
+                v.TextColor3 = COL_MAIN
+            end
+
+            if v:IsA("TextButton") and v.Name == "BindLabel" and v.Text ~= "[-]" then
+                v.TextColor3 = COL_MAIN
+            end
+
+            if v:IsA("TextBox") then 
+                v.BackgroundColor3 = COL_INACT
+                v.TextColor3 = COL_TEXT
+                local st = v:FindFirstChildWhichIsA("UIStroke")
+                if st then st.Color = COL_STROKE end
+            end
+            
+            if v:IsA("UIStroke") and v.Name == "Accent" then
+                v.Color = COL_MAIN
+            end
+        end)
+    end
+    
+    pcall(function()
+        for _, st in ipairs(T.Pools.shootingStars) do st.grad.Color = ColorSequence.new(COL_MAIN) end
+        for _, tr in ipairs(T.Pools.trail) do tr.BackgroundColor3 = COL_MAIN end
+        for _, r in ipairs(T.Pools.rain) do r.obj.BackgroundColor3 = COL_MAIN end
+        for _, s in ipairs(T.Pools.snow) do s.obj.BackgroundColor3 = COL_MAIN end
+        for _, cs in ipairs(T.Pools.cosmos) do cs.obj.BackgroundColor3 = COL_MAIN end
+        for _, tp in ipairs(T.Pools.bgTornadoParticles) do tp.obj.BackgroundColor3 = COL_MAIN end
+    end)
+    
+    for _, btn in pairs(T.UI) do
+        if typeof(btn) == "Instance" and btn:IsA("TextButton") then
+            pcall(function()
+                local st = btn:FindFirstChild("UIStroke")
+                local isActive = string.find(btn.Text, ": ON") or string.find(btn.Text, "LOCKED") or string.find(btn.Text, ": ACTIVE")
+                if isActive then 
+                    btn.BackgroundColor3 = COL_ACT; btn.TextColor3 = COL_TEXT; if st then st.Color = COL_MAIN end
+                else 
+                    btn.BackgroundColor3 = COL_INACT; btn.TextColor3 = COL_TEXT; if st then st.Color = COL_STROKE end 
+                end
+            end)
+        end
+    end
+    
+    for _, tData in ipairs(T.Pools.tabBtns) do
+        pcall(function()
+            local b = tData.btn
+            local st = b:FindFirstChildWhichIsA("UIStroke")
+            if b == T.Vars.currentActiveTabBtn then
+                b.BackgroundColor3 = COL_ACT
+                b.TextColor3 = COL_TEXT
+                if st then st.Color = COL_MAIN end
+                tData.ind.BackgroundColor3 = COL_MAIN
+            else
+                b.BackgroundColor3 = COL_INACT
+                b.TextColor3 = COL_TEXT
+                if st then st.Color = COL_STROKE end
+            end
+        end)
+    end
+end
+
+local function activateTheme(btn, themeName)
+    local thBtns = {T.UI.btnRed, T.UI.btnBlue, T.UI.btnGreen, T.UI.btnPurple, T.UI.btnOrange, T.UI.btnPink, T.UI.btnWhite, T.UI.btnBlack}
+    for _, b in ipairs(thBtns) do
+        local fn = b:GetAttribute("FeatureName")
+        if b == btn or (btn == nil and string.match(b.Text, themeName)) then 
+            b.Text = "   " .. fn .. ": ON" 
+        else 
+            b.Text = "   " .. fn .. ": OFF" 
+        end
+    end
+    ChangeTheme(themeName)
+end
+
+local function updateBgBtns(activeBtn)
+    local bgBtns = {T.UI.btnBgSolid, T.UI.btnBgTrans, T.UI.btnBgGrad, T.UI.btnBgStars, T.UI.btnBgRain, T.UI.btnBgSnow, T.UI.btnBgCosmos, T.UI.btnBgMouse, T.UI.btnBgTornado}
+    for _, btn in ipairs(bgBtns) do
+        local fn = btn:GetAttribute("FeatureName")
+        if btn == activeBtn then 
+            btn.Text = "   " .. fn .. ": ON" 
+        else 
+            btn.Text = "   " .. fn .. ": OFF" 
+        end
+    end
+    ChangeTheme(T.Vars.activeTheme)
+end
+
+local function hideAllBgs() 
+    SolidBg.Visible = false
+    TransBg.Visible = false
+    GradBg.Visible = false
+    StarsBg.Visible = false
+    RainBg.Visible = false
+    SnowBg.Visible = false
+    CosmosBg.Visible = false
+    MouseBg.Visible = false
+    TrailPanelBg.Visible = false
+    TornadoBgBg.Visible = false 
+end
+
+local function setAction(btn, func)
+    btn.MouseButton1Click:Connect(function()
+        if T.Vars.currentBind == nil then func() end
+    end)
+end
+
+local function updateBtnState(btn, state)
+    local fn = btn:GetAttribute("FeatureName")
+    btn.Text = "   " .. fn .. ": " .. (state and "ON" or "OFF")
+    ChangeTheme(T.Vars.activeTheme) 
+end
+
+-- =================[ KEYAUTH API ПАНЕЛЬ ]=================
+local KeyFrame = Instance.new("Frame")
+KeyFrame.Name = "KeyFrame"
+KeyFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+KeyFrame.Size = UDim2.new(0, 400, 0, 220)
+KeyFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+KeyFrame.BackgroundColor3 = COL_BG
+KeyFrame.BorderSizePixel = 0
+KeyFrame.Active = true
+KeyFrame.Visible = false
+KeyFrame.ZIndex = 100
+KeyFrame.Parent = ScreenGui
+MakeDraggable(KeyFrame)
+
+local KeyFrameStroke = Instance.new("UIStroke")
+KeyFrameStroke.Name = "KeyFrameStroke"
+KeyFrameStroke.Color = COL_MAIN
+KeyFrameStroke.Thickness = 2
+KeyFrameStroke.Parent = KeyFrame
+
+local KeyTitle = Instance.new("TextLabel")
+KeyTitle.Name = "KeyTitle"
+KeyTitle.Size = UDim2.new(0, 400, 0, 50)
+KeyTitle.Position = UDim2.new(0, 0, 0, 20)
+KeyTitle.Text = "AUTHENTICATION"
+KeyTitle.TextColor3 = COL_MAIN
+KeyTitle.BackgroundTransparency = 1
+KeyTitle.Font = UI_TITLE_FONT
+KeyTitle.TextSize = 24
+KeyTitle.ZIndex = 101
+KeyTitle.Parent = KeyFrame
+
+local KeyInput = Instance.new("TextBox")
+KeyInput.Name = "KeyInput"
+KeyInput.Size = UDim2.new(0, 300, 0, 45)
+KeyInput.Position = UDim2.new(0, 50, 0, 85)
+KeyInput.BackgroundColor3 = COL_INACT
+KeyInput.BorderSizePixel = 0
+KeyInput.Text = ""
+KeyInput.PlaceholderText = "Paste License Key here..."
+KeyInput.PlaceholderColor3 = Color3.fromRGB(100, 100, 100)
+KeyInput.TextColor3 = COL_TEXT
+KeyInput.Font = UI_FONT
+KeyInput.TextSize = 14
+KeyInput.ClearTextOnFocus = false
+KeyInput.TextEditable = true
+KeyInput.ZIndex = 101
+KeyInput.Parent = KeyFrame
+
+local KeyInputStroke = Instance.new("UIStroke")
+KeyInputStroke.Name = "KeyInputStroke"
+KeyInputStroke.Color = COL_STROKE
+KeyInputStroke.Thickness = 1
+KeyInputStroke.Parent = KeyInput
+
+local KeyBtn = Instance.new("TextButton")
+KeyBtn.Name = "VerifyButton"
+KeyBtn.Size = UDim2.new(0, 300, 0, 45)
+KeyBtn.Position = UDim2.new(0, 50, 0, 145)
+KeyBtn.BackgroundColor3 = COL_INACT
+KeyBtn.BorderSizePixel = 0
+KeyBtn.Text = "VERIFY KEY"
+KeyBtn.TextColor3 = COL_MAIN
+KeyBtn.Font = UI_TITLE_FONT
+KeyBtn.TextSize = 15
+KeyBtn.AutoButtonColor = false
+KeyBtn.ZIndex = 101
+KeyBtn.Parent = KeyFrame
+
+local KeyBtnStroke = Instance.new("UIStroke")
+KeyBtnStroke.Name = "KeyBtnStroke"
+KeyBtnStroke.Color = COL_MAIN
+KeyBtnStroke.Thickness = 1.5
+KeyBtnStroke.Parent = KeyBtn
+
+local isActivated = false
+local isLoggingIn = false
+local KeyAuthApp = { Name = "standart", OwnerID = "NSF5QmXRX1", Secret = "6b3465408da0f3a70daf56c5fd114b3923e5bb09d79f13b7d9b16792dd8bd159", Version = "1.0" }
+
+KeyBtn.MouseButton1Click:Connect(function()
+    if isLoggingIn then return end 
+    local enteredKey = string.gsub(KeyInput.Text, "[%s%c]", "")
+    if enteredKey == "" then return end
+    isLoggingIn = true
+    KeyBtn.Text = "CONNECTING..."
+    
+    task.spawn(function()
+        local function resetUI(msg) 
+            KeyInput.Text = ""
+            KeyInput.PlaceholderText = msg or "ERROR!"
+            KeyBtn.Text = "VERIFY KEY"
+            isLoggingIn = false 
+        end
+        
+        local reqFunc = nil
+        if syn and syn.request then 
+            reqFunc = syn.request 
+        elseif http and http.request then 
+            reqFunc = http.request 
+        elseif http_request then 
+            reqFunc = http_request 
+        elseif request then 
+            reqFunc = request 
+        elseif fluxus and fluxus.request then 
+            reqFunc = fluxus.request 
+        end
+        
+        if not reqFunc then resetUI("UNSUPPORTED EXECUTOR"); return end
+        
+        local hwid = "Unknown"
+        pcall(function() hwid = game:GetService("RbxAnalyticsService"):GetClientId() end)
+        
+        local initBody = string.format("type=init&ver=%s&name=%s&ownerid=%s", KeyAuthApp.Version, KeyAuthApp.Name, KeyAuthApp.OwnerID)
+        local success1, initRes = pcall(function() 
+            return reqFunc({ Url = "https://keyauth.win/api/1.2/", Method = "POST", Headers = {["Content-Type"] = "application/x-www-form-urlencoded"}, Body = initBody }) 
+        end)
+        
+        if not success1 or not initRes or initRes.StatusCode ~= 200 then resetUI("API CONNECTION FAILED"); return end
+        
+        local parseSuccess, initData = pcall(function() return HttpService:JSONDecode(initRes.Body) end)
+        if not parseSuccess or not initData.success then resetUI(initData and initData.message or "INIT FAILED"); return end
+
+        local licBody = string.format("type=license&key=%s&hwid=%s&sessionid=%s&name=%s&ownerid=%s", enteredKey, hwid, initData.sessionid, KeyAuthApp.Name, KeyAuthApp.OwnerID)
+        local success2, licRes = pcall(function() 
+            return reqFunc({ Url = "https://keyauth.win/api/1.2/", Method = "POST", Headers = {["Content-Type"] = "application/x-www-form-urlencoded"}, Body = licBody }) 
+        end)
+        
+        if not success2 or not licRes then resetUI("LICENSE REQ FAILED"); return end
+        
+        local parseSuccess2, licData = pcall(function() return HttpService:JSONDecode(licRes.Body) end)
+        
+        if parseSuccess2 and licData.success then
+            KeyBtn.Text = "NICE"
+            KeyBtn.BackgroundColor3 = Color3.fromRGB(0, 150, 0)
+            task.wait(0.6)
+            
+            KeyFrame.Visible = false
+            task.wait(0.4)
+            
+            isActivated = true
+            if MainFrame then MainFrame.Visible = true end
+            SendNotification("🔥 Successfully Authenticated!")
+            isLoggingIn = false
+        else
+            resetUI(licData and licData.message or "INVALID KEY!")
+        end
+    end)
+end)
+
+local function setupTabSwitch()
+    local function doSwitch(btnObj)
+        T.Vars.currentActiveTabBtn = btnObj.btn
+        for _, t in pairs(allTabs) do t.Visible = false end
+        
+        for _, b in ipairs(T.Pools.tabBtns) do 
+            b.ind.BackgroundTransparency = 1
+            b.btn.BackgroundColor3 = COL_INACT
+            b.btn.TextColor3 = COL_TEXT
+            local str = b.btn:FindFirstChildWhichIsA("UIStroke")
+            if str then str.Color = COL_STROKE end
+        end
+        
+        btnObj.ind.BackgroundTransparency = 0
+        btnObj.ind.BackgroundColor3 = COL_MAIN
+        btnObj.btn.BackgroundColor3 = COL_ACT
+        btnObj.btn.TextColor3 = COL_TEXT
+        
+        local str = btnObj.btn:FindFirstChildWhichIsA("UIStroke")
+        if str then str.Color = COL_MAIN end
+        
+        if btnObj.btn == TabInfoBtn then TabInfo.Visible = true 
+        elseif btnObj.btn == TabLocalBtn then TabLocal.Visible = true 
+        elseif btnObj.btn == TabTruckBtn then TabTruck.Visible = true
+        elseif btnObj.btn == TabTpBtn then TabTp.Visible = true 
+        elseif btnObj.btn == TabCustomizeBtn then TabCustomize.Visible = true 
+        elseif btnObj.btn == TabThemesBtn then TabThemes.Visible = true end
+    end
+    
+    TabInfoBtn.MouseButton1Click:Connect(function() doSwitch(T.Pools.tabBtns[1]) end)
+    TabLocalBtn.MouseButton1Click:Connect(function() doSwitch(T.Pools.tabBtns[2]) end)
+    TabTruckBtn.MouseButton1Click:Connect(function() doSwitch(T.Pools.tabBtns[3]) end)
+    TabTpBtn.MouseButton1Click:Connect(function() doSwitch(T.Pools.tabBtns[4]) end)
+    TabCustomizeBtn.MouseButton1Click:Connect(function() doSwitch(T.Pools.tabBtns[5]) end)
+    TabThemesBtn.MouseButton1Click:Connect(function() doSwitch(T.Pools.tabBtns[6]) end)
+end
+setupTabSwitch()
+
+setAction(T.UI.btnBgSolid, function() hideAllBgs(); SolidBg.Visible = true; updateBgBtns(T.UI.btnBgSolid) end)
+setAction(T.UI.btnBgTrans, function() hideAllBgs(); TransBg.Visible = true; updateBgBtns(T.UI.btnBgTrans) end)
+setAction(T.UI.btnBgGrad, function() hideAllBgs(); GradBg.Visible = true; updateBgBtns(T.UI.btnBgGrad) end)
+setAction(T.UI.btnBgStars, function() hideAllBgs(); StarsBg.Visible = true; updateBgBtns(T.UI.btnBgStars) end)
+setAction(T.UI.btnBgRain, function() hideAllBgs(); RainBg.Visible = true; updateBgBtns(T.UI.btnBgRain) end)
+setAction(T.UI.btnBgSnow, function() hideAllBgs(); SnowBg.Visible = true; updateBgBtns(T.UI.btnBgSnow) end)
+setAction(T.UI.btnBgCosmos, function() hideAllBgs(); CosmosBg.Visible = true; updateBgBtns(T.UI.btnBgCosmos) end)
+setAction(T.UI.btnBgMouse, function() hideAllBgs(); TrailPanelBg.Visible = true; MouseBg.Visible = true; updateBgBtns(T.UI.btnBgMouse) end)
+setAction(T.UI.btnBgTornado, function() hideAllBgs(); TornadoBgBg.Visible = true; updateBgBtns(T.UI.btnBgTornado) end)
+
+setAction(T.UI.btnRed, function() activateTheme(T.UI.btnRed, "RED") end)
+setAction(T.UI.btnBlue, function() activateTheme(T.UI.btnBlue, "BLUE") end)
+setAction(T.UI.btnGreen, function() activateTheme(T.UI.btnGreen, "GREEN") end)
+setAction(T.UI.btnPurple, function() activateTheme(T.UI.btnPurple, "PURPLE") end)
+setAction(T.UI.btnOrange, function() activateTheme(T.UI.btnOrange, "ORANGE") end)
+setAction(T.UI.btnPink, function() activateTheme(T.UI.btnPink, "PINK") end)
+setAction(T.UI.btnWhite, function() activateTheme(T.UI.btnWhite, "WHITE") end)
+setAction(T.UI.btnBlack, function() activateTheme(T.UI.btnBlack, "BLACK") end)
+
+local function getHighestModel(obj)
+    if not obj then return nil end
+    local vehicleModel = obj:FindFirstAncestorOfClass("Model")
+    if vehicleModel and vehicleModel.Name ~= "Workspace" and not Players:GetPlayerFromCharacter(vehicleModel) then
+        local highest = vehicleModel
+        local current = vehicleModel.Parent
+        while current and current ~= workspace and current.Name ~= "Workspace" do
+            if current:IsA("Model") then highest = current end
+            current = current.Parent
+        end
+        return highest
+    end
+    return nil
+end
+
+local function TeleportTo(x, y, z)
+    local char = lp.Character
+    if not char then return end
+    
+    local hum = char:FindFirstChildWhichIsA("Humanoid")
+    local root = char:FindFirstChild("HumanoidRootPart") or char.PrimaryPart
+    
+    if hum and hum.SeatPart then
+        local veh = getHighestModel(hum.SeatPart)
+        if veh then
+            for _, v in pairs(veh:GetDescendants()) do 
+                if v:IsA("BasePart") then 
+                    v.AssemblyLinearVelocity = Vector3.new(0,0,0)
+                    v.AssemblyAngularVelocity = Vector3.new(0,0,0) 
+                end 
+            end
+            veh:PivotTo(CFrame.new(x, y + 10, z))
+            task.wait(0.05)
+            for _, v in pairs(veh:GetDescendants()) do 
+                if v:IsA("BasePart") then 
+                    v.AssemblyLinearVelocity = Vector3.new(0,0,0)
+                    v.AssemblyAngularVelocity = Vector3.new(0,0,0) 
+                end 
+            end
+        end
+    else
+        if root then
+            root.AssemblyLinearVelocity = Vector3.new(0,0,0)
+            char:PivotTo(CFrame.new(x, y + 5, z))
+            task.wait(0.05)
+            root.AssemblyLinearVelocity = Vector3.new(0,0,0)
+        end
+    end
+end
+
+-- =================[ ДЕЙСТВИЯ: TRUCK FARM И CAR FLY ]=================
+setAction(T.UI.TruckFlyBtn, function() 
+    T.State.TruckFly = not T.State.TruckFly
+    updateBtnState(T.UI.TruckFlyBtn, T.State.TruckFly) 
+    
+    if T.State.TruckFly then
+        T.Vars.origGravity = workspace.Gravity
+        workspace.Gravity = 0 
+        pcall(function()
+            local char = lp.Character
+            local seat = char and char:FindFirstChild("Humanoid") and char.Humanoid.SeatPart
+            if not seat then return end
+            local truckModel = getHighestModel(seat)
+            if not truckModel then return end
+            
+            local function processModelParts(modelToWeld)
+                for _, part in ipairs(modelToWeld:GetDescendants()) do
+                    if part:IsA("BasePart") and part ~= seat and not part:IsDescendantOf(char) then
+                        T.Pools.partProps[part] = { Massless = part.Massless, CanCollide = part.CanCollide }
+                        part.Massless = true
+                        part.CanCollide = false
+                        local w = Instance.new("WeldConstraint")
+                        w.Name = "Twisted_TrailerWeld"
+                        w.Part0 = seat
+                        w.Part1 = part
+                        w.Parent = seat
+                        table.insert(T.Pools.welds, w)
+                    end
+                end
+            end
+            processModelParts(truckModel)
+        end)
+    else
+        workspace.Gravity = T.Vars.origGravity
+        for _, w in ipairs(T.Pools.welds) do 
+            if w then w:Destroy() end 
+        end
+        table.clear(T.Pools.welds)
+        for part, props in pairs(T.Pools.partProps) do
+            if part and part.Parent then 
+                part.Massless = props.Massless
+                part.CanCollide = props.CanCollide 
+            end
+        end
+        table.clear(T.Pools.partProps)
+        
+        pcall(function()
+            local char = lp.Character
+            if char and char:FindFirstChild("Humanoid") and char.Humanoid.SeatPart then
+                local seat = char.Humanoid.SeatPart
+                if seat:FindFirstChild("T_TruckV") then seat.T_TruckV:Destroy() end
+                if seat:FindFirstChild("T_TruckG") then seat.T_TruckG:Destroy() end
+                local vR = seat.AssemblyRootPart or seat
+                vR.AssemblyLinearVelocity = Vector3.new(0, -5, 0)
+                vR.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
+            end
+        end)
+    end
+end)
+
+setAction(T.UI.CarFlyBtn, function() 
+    T.State.CarFly = not T.State.CarFly
+    updateBtnState(T.UI.CarFlyBtn, T.State.CarFly) 
+    
+    if not T.State.CarFly then
+        pcall(function()
+            local char = lp.Character
+            if char and char:FindFirstChild("Humanoid") and char.Humanoid.SeatPart then
+                local vR = char.Humanoid.SeatPart.AssemblyRootPart or char.Humanoid.SeatPart
+                if vR:FindFirstChild("T_FlyV") then vR.T_FlyV:Destroy() end
+                if vR:FindFirstChild("T_FlyG") then vR.T_FlyG:Destroy() end
+                vR.AssemblyLinearVelocity = Vector3.new(0, -5, 0)
+                vR.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
+            end
+        end)
+    end
+end)
+
+setAction(T.UI.ViroquaBtn, function() TeleportTo(10303.44, 21.47, 10725.71) end)
+setAction(T.UI.TruckJobBtn, function() TeleportTo(540.67, 21.50, 4979.54) end)
+setAction(T.UI.HibinBtn, function() TeleportTo(-10334.72, 21.50, 2448.24) end)
+
+-- =================[ ДЕЙСТВИЯ: ОСТАЛЬНОЕ ]=================
+setAction(T.UI.ActiveModsBtn, function() 
+    T.State.ShowActiveMods = not T.State.ShowActiveMods; 
+    updateBtnState(T.UI.ActiveModsBtn, T.State.ShowActiveMods)
+    ActiveModsFrame.Visible = T.State.ShowActiveMods
+end)
+
+setAction(T.UI.GodmodeBtn, function() T.State.Godmode = not T.State.Godmode; updateBtnState(T.UI.GodmodeBtn, T.State.Godmode) end)
+setAction(T.UI.TornadoEspBtn, function() T.State.TornadoESP = not T.State.TornadoESP; updateBtnState(T.UI.TornadoEspBtn, T.State.TornadoESP) end)
+setAction(T.UI.PlayerEspBtn, function() T.State.PlayerESP = not T.State.PlayerESP; updateBtnState(T.UI.PlayerEspBtn, T.State.PlayerESP) end)
+setAction(T.UI.NoclipBtn, function() T.State.Noclip = not T.State.Noclip; updateBtnState(T.UI.NoclipBtn, T.State.Noclip) end)
+
+setAction(T.UI.MyCarEspBtn, function() 
+    T.State.MyCarESP = not T.State.MyCarESP
+    updateBtnState(T.UI.MyCarEspBtn, T.State.MyCarESP)
+    if not T.State.MyCarESP then myCarHighlight.Enabled = false end
+end)
+
+setAction(T.UI.FpsBoostBtn, function() 
+    T.State.FpsBoost = not T.State.FpsBoost
+    updateBtnState(T.UI.FpsBoostBtn, T.State.FpsBoost) 
+    if T.State.FpsBoost then Lighting.GlobalShadows = false end 
+end)
+
+local origLight = {A = Lighting.Ambient, O = Lighting.OutdoorAmbient, B = Lighting.Brightness, G = Lighting.GlobalShadows}
+setAction(T.UI.FullbrightBtn, function() 
+    T.State.Fullbright = not T.State.Fullbright
+    updateBtnState(T.UI.FullbrightBtn, T.State.Fullbright) 
+    if T.State.Fullbright then 
+        Lighting.Ambient = Color3.new(1, 1, 1)
+        Lighting.OutdoorAmbient = Color3.new(1, 1, 1)
+        Lighting.Brightness = 2
+        Lighting.GlobalShadows = false 
+    else 
+        Lighting.Ambient = origLight.A
+        Lighting.OutdoorAmbient = origLight.O
+        Lighting.Brightness = origLight.B
+        Lighting.GlobalShadows = origLight.G 
+    end 
+end)
+
+setAction(T.UI.PriorLakeBtn, function() TeleportTo(824.15, 21.40, 3989.41) end)
+setAction(T.UI.HazeltonBtn, function() TeleportTo(579.97, 21.40, -12242.14) end)
+setAction(T.UI.HibbingBtn, function() TeleportTo(-10083.60, 21.36, 6639.73) end)
+
+setAction(T.UI.TpToCarBtn, function()
+    if T.Vars.mySmartCar and T.Vars.mySmartCar.Parent then
+        local tp = T.Vars.mySmartCar.PrimaryPart or T.Vars.mySmartCar:FindFirstChildWhichIsA("BasePart", true)
+        if tp then TeleportTo(tp.Position.X, tp.Position.Y, tp.Position.Z) end
+    end
+end)
+
+setAction(T.UI.TpToTornadoBtn, function()
+    local id = tonumber(T.UI.TornadoIdInput.Text)
+    if id and T.Pools.tornados[id] and T.Pools.tornados[id].r then
+        TeleportTo(T.Pools.tornados[id].r.Position.X, T.Pools.tornados[id].r.Position.Y + 15, T.Pools.tornados[id].r.Position.Z)
+    end
+end)
+
+local function setupTrap(setBtn, tpBtn, idx)
+    setAction(setBtn, function()
+        if lp.Character and lp.Character:FindFirstChild("HumanoidRootPart") then
+            T.Pools.traps[idx] = lp.Character.HumanoidRootPart.Position
+        end
+    end)
+    setAction(tpBtn, function() 
+        if T.Pools.traps[idx] then 
+            TeleportTo(T.Pools.traps[idx].X, T.Pools.traps[idx].Y, T.Pools.traps[idx].Z) 
+        end 
+    end)
+end
+
+setupTrap(T.UI.SetTrap1Btn, T.UI.TpTrap1Btn, 1)
+setupTrap(T.UI.SetTrap2Btn, T.UI.TpTrap2Btn, 2)
+setupTrap(T.UI.SetTrap3Btn, T.UI.TpTrap3Btn, 3)
+
+for _, b in ipairs(T.Pools.binds) do
+    local bindLbl = b:FindFirstChild("BindLabel")
+    if bindLbl then
+        bindLbl.MouseButton1Click:Connect(function()
+            if T.Vars.currentBind then 
+                local oldLbl = T.Vars.currentBind:FindFirstChild("BindLabel")
+                if oldLbl then 
+                    oldLbl.Text = "[-]"
+                    oldLbl.TextColor3 = Color3.fromRGB(100, 100, 100) 
+                end 
+            end
+            bindLbl.Text = "[?]"
+            bindLbl.TextColor3 = COL_MAIN
+            task.spawn(function() 
+                task.wait(0.05)
+                T.Vars.currentBind = b 
+            end)
+        end)
+    end
+end
+
+UIS.InputBegan:Connect(function(input, gpe)
+    if T.Vars.currentBind then
+        local key = input.KeyCode
+        if key == Enum.KeyCode.Backspace or key == Enum.KeyCode.Escape then
+            local bindLabel = T.Vars.currentBind:FindFirstChild("BindLabel")
+            if bindLabel then 
+                bindLabel.Text = "[-]"
+                bindLabel.TextColor3 = Color3.fromRGB(100, 100, 100) 
+            end
+            T.Vars.currentBind = nil
+        elseif key ~= Enum.KeyCode.Unknown then
+            local bindLabel = T.Vars.currentBind:FindFirstChild("BindLabel")
+            if bindLabel then 
+                bindLabel.Text = "[" .. key.Name .. "]"
+                bindLabel.TextColor3 = Color3.fromRGB(100, 100, 100) 
+            end
+            T.Vars.currentBind = nil
+        end
+        return
+    end
+
+    if not gpe and input.KeyCode == Enum.KeyCode.Delete and isActivated then
+        MainFrame.Visible = not MainFrame.Visible
+    end
+    
+    if not gpe and isActivated then
+        for _, b in ipairs(T.Pools.binds) do
+            local lbl = b:FindFirstChild("BindLabel")
+            if lbl and lbl.Text == "[" .. input.KeyCode.Name .. "]" then
+                for _, conn in pairs(getconnections(b.MouseButton1Click)) do 
+                    conn:Fire() 
+                end
+            end
+        end
+    end
+end)
+
+UIS.InputEnded:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then 
+        T.Vars.activeSlider = nil 
+    end
+end)
+
+print("[TWISTED] Step 5: Starting Async Engines...")
+
+task.spawn(function()
+    while task.wait(0.1) do
+        local myCharacter = lp.Character 
+        pcall(function()
+            if myCharacter and myCharacter:FindFirstChild("Humanoid") then 
+                local h = myCharacter.Humanoid 
+                if h.SeatPart then 
+                    local nM = getHighestModel(h.SeatPart) 
+                    if nM and nM:IsA("Model") and nM ~= myCharacter and T.Vars.mySmartCar ~= nM then 
+                        T.Vars.mySmartCar = nM 
+                    end 
+                end 
+            end
+        end)
+        
+        pcall(function()
+            if T.State.ShowActiveMods then
+                local str = ""
+                local count = 0
+                if T.State.CarFly then str = str .. "• Car Fly\n"; count = count + 1 end
+                if T.State.TruckFly then str = str .. "• Truck Fly\n"; count = count + 1 end
+                if T.State.Godmode then str = str .. "• Godmode\n"; count = count + 1 end
+                if T.State.Noclip then str = str .. "• Noclip\n"; count = count + 1 end
+                if T.State.FpsBoost then str = str .. "• FPS Boost\n"; count = count + 1 end
+                if T.State.Fullbright then str = str .. "• Fullbright\n"; count = count + 1 end
+                if T.State.TornadoESP then str = str .. "• Tornado ESP\n"; count = count + 1 end
+                if T.State.PlayerESP then str = str .. "• Player ESP\n"; count = count + 1 end
+                if T.State.MyCarESP then str = str .. "• My Car ESP\n"; count = count + 1 end
+                
+                if count == 0 then 
+                    str = "None active."
+                    count = 1 
+                end
+                
+                ActiveModsLabel.Text = str
+                ActiveModsFrame.Size = UDim2.new(0, 160, 0, 40 + (count * 16))
+            end
+        end)
+        
+        pcall(function()
+            if not T.State.TornadoESP then
+                for _, t in ipairs(T.Pools.tornados) do
+                    if t.txtLbl then t.txtLbl:Destroy() end
+                    if t.ln then t.ln:Destroy() end
+                end
+                table.clear(T.Pools.tornados); return
+            end
+            
+            if tick() - T.Vars.lastTScan > 1 then
+                T.Vars.lastTScan = tick()
+                task.spawn(function()
+                    local cnd = {}
+                    local descendants = workspace:GetDescendants()
+                    for i, v in ipairs(descendants) do
+                        if i % 800 == 0 then RunService.Heartbeat:Wait() end
+                        if v:IsA("BasePart") then
+                            local n = string.lower(v.Name)
+                            if (n:find("tornado") or n:find("funnel")) and v.Size.Y > 5 then
+                                local bd = false
+                                for _, w in ipairs({"tiv", "tv", "probe", "trap", "sensor", "radar", "screen", "warning", "watch", "siren", "intercept", "vehicle", "radio", "detector", "car", "seat"}) do
+                                    if string.find(n, w) then bd = true; break end
+                                end
+                                if not bd then table.insert(cnd, v) end
+                            end
+                        end
+                    end
+                    
+                    local grp = {}
+                    for _, c in ipairs(cnd) do
+                        local cls = false
+                        for _, g in ipairs(grp) do 
+                            if (c.Position - g.Position).Magnitude < 1000 then 
+                                cls = true
+                                break 
+                            end 
+                        end
+                        if not cls then table.insert(grp, c) end
+                    end
+                    
+                    for i = #T.Pools.tornados, 1, -1 do
+                        local t = T.Pools.tornados[i]
+                        local ex = false
+                        for _, g in ipairs(grp) do 
+                            if t.r == g then 
+                                ex = true
+                                break 
+                            end 
+                        end
+                        if not ex then
+                            if t.txtLbl then t.txtLbl:Destroy() end
+                            if t.ln then t.ln:Destroy() end
+                            table.remove(T.Pools.tornados, i)
+                        end
+                    end
+                    
+                    for _, g in ipairs(grp) do
+                        local trd = false
+                        for _, t in ipairs(T.Pools.tornados) do 
+                            if t.r == g then 
+                                trd = true
+                                break 
+                            end 
+                        end
+                        if not trd then
+                            local txtLbl = Instance.new("TextLabel")
+                            txtLbl.Name = "T_ESP_2D"
+                            txtLbl.Size = UDim2.new(0, 200, 0, 50)
+                            txtLbl.BackgroundTransparency = 1
+                            txtLbl.TextColor3 = COL_MAIN
+                            txtLbl.TextStrokeTransparency = 0.2
+                            txtLbl.TextStrokeColor3 = Color3.new(0,0,0)
+                            txtLbl.Font = UI_TITLE_FONT
+                            txtLbl.TextSize = 14
+                            txtLbl.Text = "Loading..."
+                            txtLbl.ZIndex = 100
+                            txtLbl.Visible = false
+                            txtLbl.Parent = ScreenGui
+                            
+                            local ln = nil
+                            if camera then 
+                                ln = Instance.new("BoxHandleAdornment")
+                                ln.Name = genName()
+                                ln.Color3 = COL_MAIN
+                                ln.Transparency = 0.4
+                                ln.AlwaysOnTop = true
+                                ln.ZIndex = 5
+                                ln.Adornee = workspace.Terrain
+                                ln.Parent = camera 
+                            end
+                            
+                            local speedStr = getTornadoWindSpeed(getHighestModel(g))
+                            table.insert(T.Pools.tornados, {r = g, txtLbl = txtLbl, ln = ln, lP = g.Position, lT = tick(), v = Vector3.new(), sY = g.Position.Y, speed = speedStr})
+                        end
+                    end
+                end)
+            end
+        end)
+    end
+end)
+
+RunService.RenderStepped:Connect(function(dt)
+    T.Vars.frC = T.Vars.frC + 1 
+    if tick() - T.Vars.fpsLT >= 1 then 
+        pcall(function() 
+            if Watermark:FindFirstChild("WmText") then 
+                Watermark.WmText.Text = "Twisted XENO | FPS: " .. T.Vars.frC .. " | Ping: " .. math.floor(Stats.Network.ServerStatsItem["Data Ping"]:GetValue()) .. "ms" 
+            end 
+        end) 
+        T.Vars.frC = 0
+        T.Vars.fpsLT = tick() 
+    end
+    
+    if GradBg.Visible then 
+        pcall(function() BgGrad.Rotation = (tick() * 45) % 360 end) 
+    end
+    
+    if MouseBg.Visible then
+        local mPos = UIS:GetMouseLocation()
+        if (mPos - T.Vars.lastMouse).Magnitude > 4 then
+            T.Vars.lastMouse = mPos
+            if #T.Pools.trail > 0 then
+                local c = T.Pools.trail[T.Vars.trailIdx]
+                if c then
+                    T.Vars.trailIdx = (T.Vars.trailIdx % #T.Pools.trail) + 1
+                    c.Position = UDim2.new(0, mPos.X, 0, mPos.Y)
+                    c.Size = UDim2.new(0, 4, 0, 4)
+                    c.BackgroundTransparency = 0
+                    c.Visible = true
+                    TweenService:Create(c, TweenInfo.new(0.6, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {Size = UDim2.new(0, 24, 0, 24), BackgroundTransparency = 1}):Play()
+                end
+            end
+        end
+    end
+    
+    if StarsBg.Visible then
+        for _, starData in ipairs(T.Pools.shootingStars) do
+            local star = starData.obj
+            local nx = star.Position.X.Scale + (starData.sx * dt)
+            local ny = star.Position.Y.Scale + (starData.sy * dt)
+            star.Position = UDim2.new(nx, 0, ny, 0)
+            local alpha = 0
+            if nx < 0.05 then 
+                alpha = 1 - (nx / 0.05) 
+            elseif nx > 0.95 then 
+                alpha = (nx - 0.95) / 0.05 
+            elseif ny < 0.05 then 
+                alpha = 1 - (ny / 0.05) 
+            elseif ny > 0.95 then 
+                alpha = (ny - 0.95) / 0.05 
+            end
+            star.BackgroundTransparency = math.clamp(alpha, 0, 1)
+            
+            if ny > 1.0 or nx > 1.0 then
+                if math.random(1, 2) == 1 then 
+                    star.Position = UDim2.new(math.random(10, 80) / 100, 0, 0.01, 0) 
+                else 
+                    star.Position = UDim2.new(0.01, 0, math.random(10, 80) / 100, 0) 
+                end
+                starData.sx = (math.random(20, 50) / 100) * T.Vars.starSpeed
+                starData.sy = (math.random(20, 50) / 100) * T.Vars.starSpeed
+                star.Rotation = math.deg(math.atan2(starData.sy, starData.sx))
+                star.Size = UDim2.new(0, math.random(15, 45), 0, math.random(2, 3))
+            end
+        end
+    end
+    
+    if RainBg.Visible then
+        for _, d in ipairs(T.Pools.rain) do
+            if d.obj and d.obj.Parent then
+                d.obj.Position = UDim2.new(d.obj.Position.X.Scale, 0, d.obj.Position.Y.Scale + d.speed * dt, 0)
+                if d.obj.Position.Y.Scale > 1.1 then 
+                    d.obj.Position = UDim2.new(math.random(), 0, -0.1, 0) 
+                end
+            end
+        end
+    end
+    
+    if SnowBg.Visible then
+        for _, f in ipairs(T.Pools.snow) do
+            if f.obj and f.obj.Parent then
+                f.phase = f.phase + dt * 2
+                local sineX = math.sin(f.phase) * 0.002
+                f.obj.Position = UDim2.new(f.obj.Position.X.Scale + sineX, 0, f.obj.Position.Y.Scale + f.speed * dt, 0)
+                if f.obj.Position.Y.Scale > 1.1 then 
+                    f.obj.Position = UDim2.new(math.random(), 0, -0.1, 0) 
+                end
+            end
+        end
+    end
+    
+    if CosmosBg.Visible then
+        for _, s in ipairs(T.Pools.cosmos) do
+            if s.obj and s.obj.Parent then
+                s.z = s.z - (s.speed * dt)
+                if s.z <= 0.01 then 
+                    s.x = (math.random() - 0.5) * 2
+                    s.y = (math.random() - 0.5) * 2
+                    s.z = 1 
+                end
+                
+                local px = (s.x / s.z) * 0.5 + 0.5
+                local py = (s.y / s.z) * 0.5 + 0.5
+                
+                if px < 0 or px > 1 or py < 0 or py > 1 then
+                    s.z = 0.01
+                    s.obj.Visible = false
+                else
+                    local distFromCenter = math.sqrt(s.x^2 + s.y^2)
+                    local length = math.clamp((1 - s.z) * 30 * distFromCenter, 2, 60)
+                    local thickness = math.clamp(2 - s.z, 1, 3)
+                    s.obj.Size = UDim2.new(0, length, 0, thickness)
+                    s.obj.Rotation = math.deg(math.atan2(s.y, s.x))
+                    s.obj.Position = UDim2.new(px, 0, py, 0)
+                    local alpha = 0
+                    if px < 0.05 then 
+                        alpha = 1 - (px / 0.05) 
+                    elseif px > 0.95 then 
+                        alpha = (px - 0.95) / 0.05 
+                    elseif py < 0.05 then 
+                        alpha = 1 - (py / 0.05) 
+                    elseif py > 0.95 then 
+                        alpha = (py - 0.95) / 0.05 
+                    end
+                    s.obj.BackgroundTransparency = math.clamp(alpha, 0, 1)
+                    s.obj.Visible = true
+                end
+            end
+        end
+    end
+
+    if TornadoBgBg.Visible then
+        local t = tick()
+        local bgWidth = TornadoBgBg.AbsoluteSize.X
+        if bgWidth == 0 then bgWidth = 600 end
+        
+        local tornadoCenterX = 0.5 + math.sin(t * 0.5) * 0.15 
+        
+        for _, pData in ipairs(T.Pools.bgTornadoParticles) do
+            local p = pData.obj
+            local curAngle = pData.angOffset + (t * pData.rotSpeed)
+            
+            local sinA = math.sin(curAngle)
+            local cosA = math.cos(curAngle)
+            
+            local posX = tornadoCenterX + (sinA * (pData.radius / bgWidth))
+            p.Position = UDim2.new(posX, 0, pData.yRel, 0)
+            
+            local depthFactor = (cosA + 1) / 2
+            
+            local perspectiveWidth = pData.baseWidth * (0.3 + 0.7 * math.abs(cosA))
+            local sizeScale = 0.5 + (depthFactor * 0.8)
+            local finalWidth = perspectiveWidth * sizeScale
+            local finalHeight = math.clamp(3 * sizeScale, 1, 5)
+            
+            p.Size = UDim2.new(0, finalWidth, 0, finalHeight)
+            p.BackgroundTransparency = 0.85 - (depthFactor * 0.6) 
+            p.ZIndex = 12 + math.floor(depthFactor * 5)
+        end
+    end
+
+    pcall(function()
+        local myCharacter = lp.Character
+        local myRoot = myCharacter and (myCharacter:FindFirstChild("HumanoidRootPart") or myCharacter.PrimaryPart)
+        
+        if T.State.PlayerESP and myRoot then
+            for _, p in ipairs(Players:GetPlayers()) do
+                if p == lp then continue end
+                local c = p.Character
+                local hd = c and c:FindFirstChild("Head")
+                local hm = c and c:FindFirstChild("Humanoid")
+                if hd and hm and hm.Health > 0 then
+                    local pos, onScreen = camera:WorldToViewportPoint(hd.Position + Vector3.new(0, 1.5, 0))
+                    local e = T.Pools.playerEsps[p]
+                    if not e then
+                        e = Instance.new("TextLabel")
+                        e.Name = "PEspTxt"
+                        e.Size = UDim2.new(0, 200, 0, 50)
+                        e.BackgroundTransparency = 1
+                        e.TextColor3 = COL_MAIN
+                        e.TextStrokeTransparency = 0.2
+                        e.TextStrokeColor3 = Color3.new(0,0,0)
+                        e.Font = Enum.Font.GothamBold
+                        e.TextSize = 13
+                        e.Parent = ScreenGui
+                        T.Pools.playerEsps[p] = e
+                    end
+                    if onScreen then
+                        e.Visible = true
+                        e.Position = UDim2.new(0, pos.X - 100, 0, pos.Y - 25)
+                        local d = math.floor((myRoot.Position - hd.Position).Magnitude)
+                        e.TextColor3 = COL_MAIN
+                        e.Text = "[" .. p.Name .. "]\n" .. d .. " st"
+                    else 
+                        e.Visible = false 
+                    end
+                else
+                    if T.Pools.playerEsps[p] then 
+                        T.Pools.playerEsps[p]:Destroy()
+                        T.Pools.playerEsps[p] = nil 
+                    end
+                end
+            end
+        else
+            for p, e in pairs(T.Pools.playerEsps) do 
+                e:Destroy() 
+            end
+            table.clear(T.Pools.playerEsps)
+        end
+    end)
+    
+    pcall(function()
+        if T.State.MyCarESP and T.Vars.mySmartCar and T.Vars.mySmartCar.Parent then
+            myCarHighlight.Adornee = T.Vars.mySmartCar
+            myCarHighlight.Enabled = true
+        else 
+            myCarHighlight.Enabled = false 
+        end
+    end)
+    
+    pcall(function()
+        if not T.State.TornadoESP then return end
+        local myCharacter = lp.Character
+        local myRoot = myCharacter and (myCharacter:FindFirstChild("HumanoidRootPart") or myCharacter.PrimaryPart)
+        local rP = RaycastParams.new()
+        rP.FilterType = Enum.RaycastFilterType.Exclude
+        
+        for i, t in ipairs(T.Pools.tornados) do
+            if t.r and t.r.Parent and t.txtLbl and t.ln then
+                local cP, cT = t.r.Position, tick()
+                local timeDt = cT - t.lT
+                local fL = {t.r}
+                if myCharacter then table.insert(fL, myCharacter) end
+                rP.FilterDescendantsInstances = fL
+                
+                local ht = workspace:Raycast(Vector3.new(cP.X, 1500, cP.Z), Vector3.new(0, -3000, 0), rP)
+                local tY = ht and ht.Position.Y or cP.Y
+                t.sY = t.sY and (t.sY * 0.8 + tY * 0.2) or tY
+                
+                if timeDt > 0.05 then
+                    local mV = Vector3.new(cP.X - t.lP.X, 0, cP.Z - t.lP.Z)
+                    local vl = mV / timeDt
+                    if mV.Magnitude > 0.1 then 
+                        t.v = t.v:Lerp(vl, 0.15) 
+                    else 
+                        t.v = t.v:Lerp(Vector3.new(), 0.15) 
+                    end
+                    t.lP, t.lT = cP, cT
+                end
+                
+                local tPos = Vector3.new(cP.X, t.sY + 0.5, cP.Z)
+                
+                if t.ln then
+                    if t.v.Magnitude > 2 then
+                        t.ln.Visible = true
+                        local pL = t.v.Magnitude * T.Vars.pathLen
+                        t.ln.Size = Vector3.new(T.Vars.pathWid, 0.2, pL)
+                        t.ln.CFrame = CFrame.lookAt(tPos, tPos + t.v) * CFrame.new(0, 0, -pL / 2)
+                        t.ln.Color3 = COL_MAIN
+                    else
+                        t.ln.Visible = false
+                    end
+                end
+                
+                local pos, onScreen = camera:WorldToViewportPoint(tPos + Vector3.new(0, 50, 0))
+                if onScreen then
+                    t.txtLbl.Visible = true
+                    t.txtLbl.Position = UDim2.new(0, pos.X - 100, 0, pos.Y - 25)
+                    local distStr = "???"
+                    if myRoot then 
+                        distStr = tostring(math.floor((myRoot.Position - tPos).Magnitude)) .. " st" 
+                    end
+                    t.txtLbl.Text = string.format("[ %d ] 🌪️ TORNADO\nDist: %s\nWind: %s", i, distStr, tostring(t.speed))
+                    t.txtLbl.TextColor3 = COL_MAIN
+                else
+                    t.txtLbl.Visible = false
+                end
+            end
+        end
+    end)
+    
+    if T.Vars.activeSlider then
+        local mousePos = UIS:GetMouseLocation().X
+        local pct = math.clamp((mousePos - T.Vars.activeSlider.btn.AbsolutePosition.X) / T.Vars.activeSlider.btn.AbsoluteSize.X, 0, 1)
+        T.Vars.activeSlider.fill.Size = UDim2.new(pct, 0, 1, 0)
+        local val = T.Vars.activeSlider.min + (T.Vars.activeSlider.max - T.Vars.activeSlider.min) * pct
+        if not T.Vars.activeSlider.isFloat then val = math.floor(val) end
+        T.Vars.activeSlider.lbl.Text = T.Vars.activeSlider.name .. (T.Vars.activeSlider.isFloat and string.format("%.1f", val) or tostring(val))
+        T.Vars.activeSlider.cb(val)
+    end
+end)
+
+RunService.Stepped:Connect(function()
+    pcall(function()
+        if T.State.Godmode and lp.Character then 
+            local hm = lp.Character:FindFirstChild("Humanoid") 
+            if hm and not hm.SeatPart then 
+                local st = hm:GetState() 
+                if st == Enum.HumanoidStateType.Ragdoll or st == Enum.HumanoidStateType.FallingDown then 
+                    hm:ChangeState(Enum.HumanoidStateType.GettingUp) 
+                end 
+            end 
+        end
+        if T.State.Noclip and lp.Character then 
+            for _, p in pairs(lp.Character:GetDescendants()) do 
+                if p:IsA("BasePart") then p.CanCollide = false end 
+            end 
+            local hm = lp.Character:FindFirstChild("Humanoid") 
+            if hm and hm.SeatPart then 
+                local c = getHighestModel(hm.SeatPart) 
+                if c then 
+                    for _, p in pairs(c:GetDescendants()) do 
+                        if p:IsA("BasePart") then p.CanCollide = false end 
+                    end 
+                end 
+            end 
+        end
+    end)
+end)
+
+RunService.Heartbeat:Connect(function()
+    pcall(function()
+        local myCharacter = lp.Character 
+        if myCharacter and myCharacter:FindFirstChild("Humanoid") then 
+            local hm = myCharacter.Humanoid
+            local r = myCharacter:FindFirstChild("HumanoidRootPart") or myCharacter.PrimaryPart
+            
+            if T.State.TruckFly then
+                if not hm.SeatPart then 
+                    workspace.Gravity = T.Vars.origGravity
+                else
+                    workspace.Gravity = 0 
+                    local seat = hm.SeatPart 
+                    local bv = seat:FindFirstChild("T_TruckV") or Instance.new("BodyVelocity", seat)
+                    bv.Name = "T_TruckV"
+                    bv.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+                    
+                    local bg = seat:FindFirstChild("T_TruckG") or Instance.new("BodyGyro", seat)
+                    bg.Name = "T_TruckG"
+                    bg.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
+                    bg.P = 9e5
+                    bg.D = 500
+                    
+                    local d = Vector3.new(0,0,0)
+                    local cF = camera.CFrame 
+                    local flatLook = Vector3.new(cF.LookVector.X, 0, cF.LookVector.Z)
+                    if flatLook.Magnitude > 0 then flatLook = flatLook.Unit end
+                    
+                    if UIS:IsKeyDown(Enum.KeyCode.Space) then d = d + Vector3.new(0, 1, 0) end 
+                    if UIS:IsKeyDown(Enum.KeyCode.LeftShift) then d = d - Vector3.new(0, 1, 0) end 
+                    if UIS:IsKeyDown(Enum.KeyCode.W) then d = d + cF.LookVector end 
+                    if UIS:IsKeyDown(Enum.KeyCode.S) then d = d - cF.LookVector end 
+                    if UIS:IsKeyDown(Enum.KeyCode.A) then d = d - cF.RightVector end 
+                    if UIS:IsKeyDown(Enum.KeyCode.D) then d = d + cF.RightVector end 
+                    
+                    if d.Magnitude > 0 then d = d.Unit end 
+                    bv.Velocity = d * T.Vars.truckSpeed
+                    if flatLook.Magnitude > 0 then bg.CFrame = CFrame.lookAt(seat.Position, seat.Position + flatLook) end
+                end
+            elseif T.State.CarFly and hm.SeatPart then 
+                local vR = hm.SeatPart.AssemblyRootPart or hm.SeatPart 
+                local bv = vR:FindFirstChild("T_FlyV") or Instance.new("BodyVelocity", vR)
+                bv.Name = "T_FlyV"
+                bv.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+                local bg = vR:FindFirstChild("T_FlyG") or Instance.new("BodyGyro", vR)
+                bg.Name = "T_FlyG"
+                bg.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
+                bg.P = 9e5
+                bg.D = 500
+                
+                local d, cF = Vector3.new(0,0,0), camera.CFrame 
+                if UIS:IsKeyDown(Enum.KeyCode.Space) then d = d + Vector3.new(0, 1, 0) end 
+                if UIS:IsKeyDown(Enum.KeyCode.LeftShift) then d = d - Vector3.new(0, 1, 0) end 
+                if UIS:IsKeyDown(Enum.KeyCode.W) then d = d + cF.LookVector end 
+                if UIS:IsKeyDown(Enum.KeyCode.S) then d = d - cF.LookVector end 
+                if UIS:IsKeyDown(Enum.KeyCode.A) then d = d - cF.RightVector end 
+                if UIS:IsKeyDown(Enum.KeyCode.D) then d = d + cF.RightVector end 
+                
+                if d.Magnitude > 0 then d = d.Unit end 
+                bv.Velocity = d * T.Vars.carSpeed
+                bg.CFrame = CFrame.lookAt(vR.Position, vR.Position + cF.LookVector)
+            end
+        end
+    end)
+end)
+
+ChangeTheme("RED")
+updateBgBtns(T.UI.btnBgSolid)
+
+print("[TWISTED] Step 6: Opening Interface...")
+if KeyFrame then KeyFrame.Visible = true end
+print("[TWISTED] SUCCESS! Script fully loaded.")
